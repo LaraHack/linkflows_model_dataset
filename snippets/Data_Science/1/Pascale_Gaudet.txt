@@ -1,0 +1,27 @@
+Overall Impression: Good
+Suggested Decision: Accept
+Technical Quality of the paper: Excellent
+Presentation: Excellent
+Reviewer`s confidence: High
+Significance: High significance
+Background: Reasonable
+Novelty: Limited novelty
+Data availability: All used and produced data (if any) are FAIR and openly available in established data repositories
+Length of the manuscript: The length of this manuscript is about right
+Summary of paper in a few sentences: 
+
+This paper describes the current progress in knowledge representation for the data sciences. Its different sections focus on knowledge representation, inference, hypothesis generation using computational representation of knowledge. The final section describes open challenges in the domain.
+
+Reasons to accept: 
+
+This paper gives a useful overview of the important domain of knowledge representation in biological research, and will be very informative to the readership of Data Sciences.
+
+Reasons to reject: 
+
+none
+
+Further comments: 
+
+I noticed some small typos:
+1. Uniprot -> UniProt
+2. e.g.. -Y remove extra period

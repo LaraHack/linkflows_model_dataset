@@ -1,0 +1,28 @@
+Suggestion: 
+Accept
+Review Comment: 
+This paper presents the DogOnt ontology and relates it to the most relevant models and standards in the Architecture/Engineering/Construction (AEC) and Facilities Management (FM) domain. The first publication of DogOnt is dated 2008 and this paper reflects its latest evolutions and presents perspectives for its adoption.
+
+I recommend the paper for publication once my main remark is addressed (see below).
+
+The paper is very well written and easy to read. It provides an excellent survey of current energy modeling efforts and clearly shows how DogOnt relates to these efforts, also through the explicit high-level mappings presented in Section 4. The ontology is well described, providing a clear overview of the main classes and also a useful modeling walk-through that concretely shows the modeler how to create instances based on the schema.
+
+DogOnt is a sound and solid ontology, designed according to high quality standards, and it is a relevant piece of work in the energy domain, as correctly claimed by the authors. Although it is an extensive ontology with a considerable number of classes and axioms, it is well structured and documented, making it understandable and usable by others. Its relevance is proved by the fact that important standardization activities supported by the European Commission and Standard Developing Organizations (SDOs), such as SAREF from ETSI, are based on DogOnt, and other relevant ontology efforts can be directly related to it, as shown in Section 4. It could be further stressed in the paper (footnote 3) that DogOnt was among the most important input sources used in the creation of SAREF.
+
+The main remark to the authors concerns the relation of DogOnt to SAREF. The paper refers to the first release of SAREF, published by ETSI in November 2015. However, in the meantime important updates took place and some extensions were created (see www.ec.europa.eu/digital-single-market/news-redirect/57284). Therefore, it is important that the authors revise the survey in Section 2 to reflect these updates. The new SAREF specifications relevant for the purpose of this paper were published in 2017 and are the following:
+• TS 103 264 v2.1.1 (SAREF 2.0) , http://www.etsi.org/deliver/etsi_ts/103200_103299/103264/02.01.01_60/ts_...
+• TR 103 411 SmartM2M; Smart Appliances; SAREF extension investigation http://www.etsi.org/deliver/etsi_tr/103400_103499/103411/01.01.01_60/tr_...
+• SAREF for Energy (SAREF4ENER): TS 103 410-1 SmartM2M; Smart Appliances Extension to SAREF; Part 1: Energy Domain http://www.etsi.org/deliver/etsi_ts/103400_103499/10341001/01.01.01_60/t...
+• SAREF for Building (SAREF4BLDG): TS 103 410-3 SmartM2M; Smart Appliances Extension to SAREF; Part 3: Building Domain http://www.etsi.org/deliver/etsi_ts/103400_103499/10341002/01.01.01_60/t...
+
+Of particular importance in the context of DogOnt are the latest SAREF release together with the SAREF4ENER and SAREF4BLDG extensions. More details on SAREF4ENER can also be found in [1]. Main changes in the latest SAREF release include the following:
+• The classes and properties related to how to represent devices in building spaces have been removed from SAREF and incorporated into the SAREF4BLDG extension related to buildings.
+• The information specific for energy efficiency has been moved to the SAREF4ENER extension. For example, the “Profile” concept has been redefined to accommodate only the properties that are general enough for any type of profile, not only for energy and power. Details on how to specifically model a power profile can now be found in the SAREF4ENER extension.
+
+Finally, a few editing remarks:
+• Page 9: the definitions provided for the two last points of the bulleted list at the end of the page, i.e., “OnOffState” and “SinglePhaseActivePowerMeasurementState” do not explicitly convey the message that these are the states in which a device can be found (e.g., the term used in the current definition of “OnOffState” is “ability” which is suitable to define functionality rather than state). I would suggest to improve the current definitions accordingly, for example:
+- “an OnOffState, modeling the ability to be providing power to connected devices, or not;” could be replaced with “an OnOffState, modeling the state assumed by the plug, reflecting its ability to be providing power to connected devices, or not;”
+- “a SinglePhaseActivePowerMeasurementState, representing the currently measured consumption value, and the relative unit of measure.” could be replaced with “a SinglePhaseActivePowerMeasurementState, representing the current state in terms of the currently measured consumption value, and the relative unit of measure.”
+• Check the acronym AEC/FM domain throughout the paper. For example, in the first paragraph of Section 5 Conclusions (page 14), there are two occurrences where it should be “AEC/FM domain” instead of “AEM/FC domain”. Also at page 12 there are two some wrong occurrences.
+
+[1] L. Daniele, M. Solanki, F. den Hartog, J. Roes: “Interoperability for Smart Appliances in the IoT World”. In Groth P. et al. (eds) Proceedings of the 15th International Semantic Web Conference (ISWC 2016), Kobe, Japan, October 19-21, 2016. Lecture Notes in Computer Science, vol 9982. Springer, Cham.

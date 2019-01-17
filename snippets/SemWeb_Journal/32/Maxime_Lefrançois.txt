@@ -1,0 +1,127 @@
+
+Suggestion: 
+Minor Revision
+Review Comment: 
+This paper describes how Knowledge Discovery in Database (KDD) can be augmented with Semantic Web Technologies (SWT). It focuses more precisely on augmenting the KDD classical phases: Data Selection, Preprocessing, Transformation, Mining, Interpretation/Evaluation by associating data with semantics (ontology concepts and relations). This is done during an initial (or transversal) additional "Data Linking" phase during which (1) relational data is lifted to RDF conformant with relevant ontologies, and (2) new knowledge is inferred and materialized using OWL inference and SPARQL Update rules. The general approach is instantiated in the EEPSA (Energy Efficiency Prediction Semantic Assistant) process to enhance energy efficiency in tertiary building using environmental factor data measured by IoT devices and meteorological data available in external datasets. EEPSA is evaluated on a real-world setting involving data measured on one floor of the IK4-TEKNIKER building, with the goal of better predicting the temperature curves 24h in advance to better control the HVAC system control. The core enablers of EEPSA are:
+1. the EEPSA ontology that imports relevant ontologies and augment them with new classes and property declarations and axioms specifically tailored to describe the building, the IoT setting, and the environmental factor data, and to infer new knowledge;
+2. a semantic representation of the building and the IoT setting defined with the EEPSA knowledge model, and RDB-to-RDF mappings that enable to lift sensor data to RDF;
+3. SPARQL-UPDATE inference rules that allow to generate new knowledge, including:
+a. outlier detection during the KDD preprocessing phase, and
+b. new variables computation during the KDD transformation phase.
+
+The following aspects of the paper are strong points and would be reasons to recommend it for publication:
+
+A1: The approach combines ingeniously OWL and rule-based inference with RDB-to-RDF techniques to enhance the results of data mining in the Knowledge Discovery in Database approach. It reports on substantial work that has been led, including (1) Knowledge Engineering work to design an ontology, semantic rules, and RDF lifting mappings, and (2) deployment and evaluation on a real building with data acquisition during 6 months.
+
+A2: The related work is comprehensive and well structured, with 68 citations for a 15 pages paper, ranging from related work on KDD for energy efficiency in buildings, to Semantic Web Technologies for KDD, and also a review and description of existing ontologies in the field.
+
+On the other hand, the paper suffers from two major problems that makes me believe more work should be done to improve it before resubmission:
+
+R1: The English and the writing should be drastically improved. Several sentences or paragraphs are approximative English, too long, grammatically incorrect, have missing words or punctuation. In some places, the structure could be improved to limit the number of repetitions and clarify the contributions. This makes the paper very hard to read in its current state. See the bottom of this review for some parts of the paper that I think English could be improved. Some native English speaker should be asked to check the paper. Section 4 is too long and repetitive with parts of section 3 and section 5. It should be restructured
+
+R2: Some of the important choices that have been made are not clearly stated: it is written in some places that: "we conducted a study and concluded that we would do this, or use that...". Such choices should be explained scientifically: the studies should be explained and/or scientific publications about them should be cited. The role and the way the Data Analyst interacts with the system is not clear. It is mentioned in some places in the paper that some important aspects of the solution are left for future work, but these are not summarized in the conclusion.
+
+R3: The evaluation is globally weak, and it's hard for me to assess how an improvement of the root mean squared error in the temperature prediction of 0.16 °C would substantially enhance the energy efficiency in the building. To make the efficiency of the approach convincing, these figures should be translated into figures about energy savings and comfort preservation.
+
+R4: In the current state of the paper, it is not possible to reproduce the results on another setting and I am left to trust what the authors state. In fact: (1) the online EEPSA ontology does not correspond to the description that is made in the paper, room is left for improvement on its quality and its publication (see below); (2) the rules that are used should be made available online for evaluation; (3) the structure of the acquired data should be described, and potentially some sample of the data should be made available (potentially anonymized); (3) the full KDD process and the algorithms that have been used in the different phases should be better described and made available; (4) the way the Data Analyst interacts with the system is not sufficiently well described.
+
+English mistakes and some more precise comments leading to R1-R4 comments:
+
+p1.
+- indoor comfort is a must and ... -> a must have / important?
+- it is necessary a system which .. -> + to have?
+- a five steps process leading the extraction.. -> + to?
+
+p2.
+- takes leverage ... -> leverages?
+- same paragraph -> unclear punctuation (missing commas?)
+- in a real-world use-case -> on?
+- Works -> Work (several places in the paper)
+- BMS have generally failed -> generally fail
+- Future information -> forecasted ?
+- effects of humidity and solar radiation have resulted to be less significant -> rephrase, correct.
+
+- But it has been proved that --> who? where?
+- So far, it has been proved that --> who? where?
+
+p3.
+- LOD: expand acronym (first instance)
+- Fig. 1 should include the additional Linking Phase
+
+p4.
+- What are the criterions to select the most relevant ontologies?
+- FIEMSER datamodel is not referenced
+- SAREF is not used in EEPSA? why?
+
+p5. paragraph 2.3
+- the ontology covers weather forecasting data over a time range that it is suitable to use within a smart home -> rephrase
+
+p6.
+- This previous phase -> this preliminary phase?
+- ssn:Sensor, ssn:Observation do not exist in the new SSN namespace. Could be replaced by sosa:Sensor, sosa:Observation
+- san:Actuator, san:Actuation could be replaced by sosa:Actuator, sosa:Actuation
+- time:hasDateTime does not exist
+
+p7.
+- first paragraph of 3.2 is too long, should be rewritten and simplified
+- existing works -> existing work (piece of work, uncountable)
+- EEPSA ontology also describe different ... -> rewrite sentence with singular for EEPSA ontology
+- has assigned -> is assigned (several places)
+- how is the task of knowing which variables might be relevant for the target space semi-automatized?
+- that is why -> this is why
+
+p8
+- to the context in which takes place. -> a word is missing
+- That is why each outlier class has assigned a -> check.
+- provides the data analyst a set of -> with a set of
+
+- why can Linking be transversal? what does it mean? does EEPSA do linking in a preliminary phase or in parallel to the phases? why?
+
+p9.
+- Variables [] in which actuators have an effect -> on which
+- underslying semantics are not correctly -> is not
+- in future stage of the research (serveral places) -> future work -> mention in the conclusion
+- sometimes we have data analyst, sometimes Data Analyst, be consistent.
+- the scenario in which -> on which
+
+p10.
+- acts as an office and over 200 people -> missing "where" ?
+- it is time for --> rephrase (2 places)
+- Other factors rather than -> other factors than
+- Once the Data Analyst has decided which weather station chooses to -> he chooses to
+
+- it is concluded that not all of these are being observed --> so what is the impact of this, the conclusion?
+- what is the interface the Data Analyst uses?
+- due to its low quality -> why? how? what impact?
+
+p11.
+- last paragraph of section 4 -> what study have been conducted? what are the raw results?
+- footnote 13 -> what study have been conducted? what are the raw results?
+- Collected data ranged --> rephrase this sentence.
+- It was also proved that best results are -> what study have been conducted? what are the raw results?
+- For the EEPSA-enabled model, first ... --> this is redundant with section 4!
+- Evaluation seems weak
+
+p12.
+- last sentence of section 5.3: please qualify/quantify how more accurate the simulation of different scenarios were. Be precise.
+-> takes leverage -> leverages
+
+p13.
+- should to be translated -> check.
+
+p14.
+- reference 18 -> check conference name.
+- reference 41 -> conference, editor, book, pages?
+
+About the EEPSA ontology and its description in the paper:
+- terms and axioms in EEPSA ontology are interesting, should be better explained in the paper, and/or some of them should be written directly in the paper for illustration (ex. eepsa:NaturallyEnlightenedSpace)
+- the quality of the ontology should be enhanced (ontology and term metadatas, axioms including domains and ranges when obvious in the name of the concept), datatype properties whose range is boolean could be replaced by classes,
+- the import of the ObjectWithState ontology and the cpannotationschema ontology is not documented
+- both the ontology and its description must be made clearer with respect to the Semantic Sensor Network ontology: the ontology inconsistently uses the old SSN ontology (http://purl.oclc.org/NET/ssnx/ssn#) and the new SOSA/SSN ontology (http://www.w3.org/ns/ssn/). To be fair, SOSA/SSN has only be frozon early June 2016, and there probably has been substantial changes on the new version during the writing of the paper: several terms now have the SOSA prefix, Actuations and Actuators are now defined within SOSA/SSN (so SAN ontology needs not be used anymore), ssn:Device and ssn:SensingDevice have been deprecated in favour of just sosa:Sensor, sosa:Actuator, sosa:Sampler, and ssn:System. The online ontology should:
+- either import the old SSN (that may shortly itself import the new SOSA/SSN so that old SSN data will become valid new SSN data),
+- or be updated to the new version following the change log in SOSA/SSN spec (in which case the paragraph in the related work should be updated and a reference to the new specification should be added)
+
+About the rules in Appendix A:
+- eepsa:openSpace is not defined in the ontology online, neither is eepsa:city, eepsa:hasDeployed, etc. This makes me believe the rules have been invented during the latest phase of the writing, and are not really used in the EESPA process.
+- http://www.w3.org/ns/ssn/observes (ssn:observes) does not exist. Use http://www.w3.org/ns/sosa/observes (sosa:observes). Same for ssn:observedBy -> sosa:isObservedBy, ssn:SensingDevice -> sosa:Sensor, eepsa:obsDate -> sosa:resultTime or sosa:phenomenonTime, etc.
+- for better readability, please use a prefix to shorten the URIs of xsd datatypes!

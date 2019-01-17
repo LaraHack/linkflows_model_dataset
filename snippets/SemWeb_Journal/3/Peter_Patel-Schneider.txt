@@ -1,0 +1,254 @@
+
+Suggestion: 
+Major Revision
+Review Comment: 
+The paper makes a number of helpful observations and a number of useful
+conclusions related to combining third-party ontologies. There is some
+reasonable work here, but also a couple of significant and possibly fatal
+flaws in the work.
+
+On the presentation side, the paper needs to be clearer about what is going
+on. I have mentioned quite a number of these problems below.
+
+On the work-performed side Dacura does not appear to be able to handle
+ontologies of even moderate size, e.g., the DBpedia ontology. This is a
+significant limitation as the DBpedia ontology is, in some sense, the
+ontology of core of the linked data universe. As well, Dracura does not
+handle OWL disjointness or equivalence. As these two aspects of OWL are
+among its most-used parts in linked data, this is a severe limitation.
+
+In a conference paper I don't think that the last two flaws would be a severe
+problem, as one might expect a follow-on paper that improved the scope of Dacura.
+In a journal paper, however, these two limitations are very significant, as
+Dacura's analysis of just about every significant linked data ontology will
+thus be severely partial. Just these two flaws are verging on being fatal
+for the paper.
+
+The paper needs some significant additions to be understandable to a wider
+audience, particularly linked data practitioners. It mentions quite a few
+points from the literature without adequately describing them. Researchers
+with a deep background in logical modelling and a knowledge of the history
+of the Semantic Web, RDF, and OWL will understand, but other readers will
+have problems determining what is going on with, for example, predication
+over classes and properties. It would be helpful for many readers if the
+paper had examples for these points.
+
+The placement of figures and tables in the paper is so far from ideal as to
+make the paper harder to read.
+
+Challenges
+
+The paper needs to better define what a linked data schema needs to be. I
+take it that the only requirement is that it is coherent (i.e., has no
+necessarily unsatisfiable classes), consistent when combined with the data
+at hand, and mentions each of the classes and properties (and datatypes?) in
+the data at hand. This can be easily achieved with an empty schema, which
+is probably not what is wanted. The paper also does not specify what
+validation is.
+
+The papeer claims to have an indentification and analysis of practical
+and theoretical challenges. It thus needs to have a clear and complete
+presentation of these challenges. The paper is not horrible in this area,
+but has some significant flaws, which I outline below.
+
+Challenge 1.
+
+The paper should explicitly mention the mismatch between OWL and RDF(S),
+which I take to be 1/ misuse of the (important) reserved vocabulary and 2/
+using RDF lists (which is also a misuse of reserved vocabulary). (The other
+mismatches are allowed in OWL 2 DL.) The paper should be careful to abide
+by OWL 2 DL throughout, particularly as some of the works that it
+prominently mentions predate OWL 2.
+
+The paper appears to want to handle inputs that use old formalisms, e.g.,
+DAML. No one should be using DAML at this point, as it has been superceeded
+by OWL. The paper doesn't explicitly mention using RDF containers, but no
+one should be using RDF containers either. [what to do if this happens?]
+
+I don't think that the prohibition in OWL is on referring to classes of
+classes. These are part of OWL 2 DL via punning. It is certainly the case
+that OWL does not perform the full set of inferences on such constructs, but
+that is by design. OWL 2 does not even do all the inferences that RDFS does
+on these constructs.
+
+Challenge 2.
+
+Examples of how "follow your nose" goes wrong would be useful here. There
+has been quite a bit of discussion on this problem.
+
+Challenge 3.
+
+Reuse is indeed a tough challenge. One of the problems is actually deciding
+what kinds of alteration are bad. It is not useful to outlaw any alteration
+because even adding a subclass to a class can be considered to alter the
+existing class. The paper should provide some information on what sorts of
+alterations are considered problematic.
+
+The paper's description of the effects of modification is not correct.
+It is not the case that an ontology's changes to another impact all users of
+the other ontology, unless one believes that all ontologies are present in
+all places. The paper needs to show where such changes actually become
+problematic without postulating non-overridable use of all ontologies in the
+web.
+
+Challenge 4.
+
+It is not that OWL is permissive per se. Instead OWL works differently from
+object-oriented systems. This is indeed a potential problem.
+
+It is not just OWL that works this way. RDFS has the same behaviour.
+Singling out OWL as the problem is thus not appropriate there. In fact, the
+example given fits within RDFS.
+
+Related Work.
+
+The description of SPARQL-based work should note that RDFUnit is very close
+to being a union of SPIN and Stardog ICV (the successor to Pellet ICV).
+
+There should be more mention of the work on integrity constraints in
+Description Logics. One branch of this work underlies Stardog ICV and the
+entire body of work can be easily found by looking at the papers that gave
+rise to Stardog ICV and also from [Patel15].
+
+Validation (description of Dacura)
+
+As one of the claimed contributions of the paper is a description of Dacura,
+the paper needs to describe Dacura in a clear and complete manner.
+
+The basic notions underlying Dacura are fairly evident from the paper.
+However, some of the details are not so clear. How is Dacura started? Do
+you give it a URL and it goes from there? Does it follow its nose on all
+IRIs it sees in its inputs, thus including the RDF, RDFS, and OWL definition
+documents? Can Dacura work well starting from an RDF document that is not
+an ontology?
+
+It is strange that Dacura does not appear to support owl:disjointWith,
+owl:equivalentClass, owl:differentFrom, and owl:sameAs. Disjointness is
+perhaps the most important aspect of validity in an ontology that uses
+open-world semantics. Equivalence is a very common tool to link ontologies
+together in linked data (see the DBpedia ontology for many examples). Even
+if Dacura uses a unique names assumption, it should handle owl:sameAs by
+identifying the two individuals involved.
+
+The particular solutions to the challenges above that are implemented in
+Dacura seem largely reasonable. Some of these solutions are also
+implemented in some OWL tools such as the OWL API. The paper should mention
+these.
+
+The general solution for properties that are not stated as object or domain
+properties is to make them annotation properties, would this be possible in
+Dacura?
+
+It is not until this section that the version of "follow your nose" that
+Dacura uses is given. This version is different from the standard one in
+linked data. The paper should discuss these differences. An example would
+be helpful as well. Having Dacura follow classes mentioned in disjointness
+axioms even though its reasoner doesn't handle them is the correct decision.
+However, it is not obvious that the listed terms exhaust all the ways that
+OWL ontologies effectively use classes. The paper should be clear as to
+whether Dacura actually follow all usese of classes in an OWL 2 ontology.
+
+It appears that a triple of the form "object rdf:type class" does not induce
+a structural dependence on the ontology that class comes from. On the other
+hand a triple of the form "object property object" does induce a dependence
+on the ontology that property comes from. Why is this so?
+
+As ontology hijacking is not defined in the paper, it is hard to determine
+whether Dacura does a reasonable job of detecting problematic axioms in
+importing ontologies.
+
+It is not really the closed/open world dichotomy that distinguishes between
+what Dacura is doing from what is done in OWL. Orphan classes in OWL, or
+indeed in RDFS, are orphan classes even in an open world setting. This is
+not to say that detecting orphan classes is a bad idea, just that a
+different discussion of the problem is needed.
+
+My takeaway is that Dracut could be useful, but that it is hamstrung as an
+analysis tool for linked data ontologies because it does not handle
+disjointness and equivalence.
+
+Evaluation
+
+OpenCyc is quite large, partly because it contains a significant number of
+individuals, and thus might be too expensive to process. However, it would
+have been worthwhile to do a partial pass over it to see what other
+ontologies it may drag in. (In my opinion this could easily be none.)
+
+The DBpedia ontology, on the other hand, is not large at all and is very
+simple, containing only a few OWL constructs like disjointness and
+equivalence as far as I can recall (although more may have been added
+recently). The inability of Dacura to process the DBpedia ontology is quite
+surprising, and rather difficult to understand. The paper should try to
+explain this significant limitation of Dracura. Even if the DBpedia
+ontology cannot be handled by Dracura, it would have been useful to also see
+what other ontologies it brings in.
+
+DBpedia is an interesting case for Dacura. It includes equivalence
+relationships into schema.org. Unfortunately Dacura does not handle this
+part of OWL. DBpedia also includes disjointness which Dacura also does not
+handle. As the DBpedia ontology can be considered to be the core ontology
+of linked data, this is a decided problem for Dacura.
+
+Schema.org is another interesting case for Dacura. It is uncertain whether
+Dacura would be able to handle schema.org. This might be reasonble, as the
+schema.org ontology doesn't quite fit correctly into linked data. However,
+schema.org is becoming an important part of linked data, and thus an
+important target for Dacura.
+
+Results
+
+The results listed are interesting, and indeed are rather depressing. Some
+of the observations in this section can be argued against, for example that
+external equivalences are erroneous, but the general thrust is reasonable.
+
+There is one claim in this section that is completely incorrect. XML Schema
+includes an int datatype (see http://www.w3.org/TR/xmlschema11-2/#int) and
+has so done for quite some time. This error needs to be fixed.
+
+The text also claims that three ontologies have tyops, but Table 6 lists
+four ontologies, two of which are not problematic.
+
+Quantification is not a notion generally associated with RDF. The paper
+should describe what it means by quantification over classes and predicates
+in RDF(S).
+
+The problem with the dc ontology is misstated. It is dcterms:type that has
+range of rdfs:Class.
+
+Usage of the RDFS built-in vocabulary as domains, ranges, etc., is not
+exactly higher-order logic. A better description of what the problematic
+aspect of these uses are is needed.
+
+In Table 7 some (mis)uses of OWL vocabulary are described as "overriding"
+and others as higher order. Neither is quite true. It would be better to
+describe these as misuse of reserved vocabulary.
+
+Recommendations
+
+The recommendations are, of course, the authors' opinion. One might argue
+for different recommendations but none of the recommendations in the paper
+are bad.
+
+However, it is strange that there is one recommendation to avoid using
+lists, but another recommendation to support misuse of the OWL reserved
+vocabulary. Why not suggest a way of handling the use of RDF lists in
+linked data ontologies?
+
+I also would have liked to see some notion of how to overcome the problems
+that exist. The OWL API can fix problems with missing declarations. Why
+not advocate for tools that can fix other problems?
+
+It would be interesting to see whether the misuse of the reserved vocabulary
+outsdie of lists can be solved via a mechanism as simple as punning.
+
+My view is that the work reported on is quite reasonable and useful but that
+paper needs a full rewrite. The paper needs to start out with a firm
+definition of what the problem is, one that is accessible to linked data
+practitioners. It should then explore each of the parts of this problem,
+providing definitions and examples so that the paper can be understood by
+linked data practitioners. Then there should be a clear description of the
+parts of Dacura that are relevant here. Finally the paper should actually
+propose fixes to be in line with its title.
+
+These changes are likely to add considerably to the length of the paper, but
+I think that the result would be a much better paper.

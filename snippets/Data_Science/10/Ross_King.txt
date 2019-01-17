@@ -1,0 +1,23 @@
+Overall Impression: Excellent
+Suggested Decision: Accept
+Technical Quality of the paper: Excellent
+Presentation: Excellent
+Reviewer`s confidence: Medium
+Significance: High significance
+Background: Comprehensive
+Novelty: Limited novelty
+Data availability: All used and produced data (if any) are FAIR and openly available in established data repositories
+Length of the manuscript: The length of this manuscript is about right
+Summary of paper in a few sentences: 
+
+The author proposes seven principles for developing thoughtful artificial intelligence, which will propel intelligent systems to become partners for scientists
+
+Reasons to accept: 
+
+The manuscript is something between a review and "thought piece". I both enjoyed reading it, and learnt from it. I presume it is submitted as a "Position Paper". As such it presents relevant and novel discussion points in a thorough manner.
+
+Reasons to reject: 
+
+none
+
+Further comments: 

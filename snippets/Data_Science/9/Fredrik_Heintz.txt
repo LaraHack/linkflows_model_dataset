@@ -1,0 +1,98 @@
+Overall Impression: Good
+Suggested Decision: Reject
+Technical Quality of the paper: Good
+Presentation: Good
+Reviewer`s confidence: High
+Significance: Moderate significance
+Background: Incomplete or inappropriate
+Novelty: Limited novelty
+Data availability: All used and produced data are FAIR and openly available in established data repositories
+Length of the manuscript: The length of this manuscript is about right
+Summary of paper in a few sentences: 
+
+The main contributions of the paper are an overview of research within the new and growing area of stream reasoning relative to a proposed reference model and a set of open research challenges in the area. Stream reasoning is both relevant and interesting for the data science community and broader.
+
+Overall the paper is a reasonable summary of where we are and where the field is likely to go in the short term future. My main criticisms are that there is no clear definition of what stream reasoning is, that the requirements and the discussions are very informal and that it mainly considers work originating from the field of semantic web.
+
+My recommendation is revise and resubmit. I'd be happy to review it again!
+
+Reasons to accept: 
+
+The topic is highly relevant and the paper gives a quite good summary of stream reasoning from some of the leading researchers in the field. Having a current summary is valuable to the field. The suggested topics for future research are relevant and could help guide researchers.
+
+Reasons to reject: 
+
+My main criticisms are that there is no clear definition of what stream reasoning is, that the requirements and the discussions are very informal and that it mainly considers work originating from the field of semantic web.
+
+Let's start with the definition. In my view, it is relevant to distinguish between stream processing and stream reasoning. Stream processing is about doing simple transformations on streams like selection, projection, joins and mappings. The common characteristic is that the result is always a subset of the input or a straight forward mapping from input to output. Stream reasoning, on the other hand, is about inferring implicit or new information. No such distinction is made in paper. As a consequence, almost anything is stream reasoning. Is for example a UNIX shell supporting pipes a stream reasoner? Is the UNIX tool tr a stream reasoner (it takes a stream as input and replaces characters in it)? The definition that is used refer to "logical reasoning in real-time on [...] noisy data streams" and still the authors claim that only some stream reasoning approaches work in real-time and most do not consider noisy data at all. Does that mean that there are no stream reasoning tools in existence? I beg to differ. The fact that we lack a clear definition of stream reasoning is one of the major open problems. This is not addressed.
+
+When it comes to the requirements, they are generally good and relevant, but they are also only informal. This makes it very hard to determine if a formalism satisfies the requirement or not. For example, take R8 Complex domains. I would argue that all SQL-based solutions, like most DSMSs, have quite good support for complex domains. Still the authors claim that this is not the case as seen in Table 1. What is the argumentation there? When it comes to R3 Variety, I would argue that CEP are very good at handling variety as they usually consider a large set of different types of events and how these are combined into more complex events. To take a third example, R1 Volume. This seems obvious. If a system can handle millions of items then it must be able to handle volume. But what about a system that is scalable in the sense that it can run on an arbitrary number of processors, but it is extremely slow, would it be good at handling high volume data? It can scale to an infinite amount of data, if you have infinite amount of computational power. My conclusion is that the requirements make sense, but are quite hard to use in practice since they are too vague. Again, coming up with formal requirements that can actually be tested would be a major research contribution. The requirements could be in the form of specific use-cases.
+
+Lastly, the paper is written by people in the area of semantic web mainly for other people in the semantic web. For example, RDF, RDF graphs and SPARQL are never explained. It is also the case that many results from classical AI areas such as belief revision, reasoning about action and change and runtime verification are not included.
+
+Further comments: 
+
+Detailed comments section by section.
+
+Section 1
+S1a: In the introduction some examples of stream reasoning are provided. It is not clear to me whether all of them can currently be expressed in some existing stream reasoning formalism.
+
+Section 2
+S2a: You define a landmark window as a window of infinite length containing the full stream. What does this definition give? Another name for a stream? In my opinion a window should by definition be finite and a window should never be processed before it is complete. If it can be processed before, then no window is necessary.
+
+S2b: I do not understand the following sentence "The graph-level entailment can be viewed as a direct application of SPARQL entailment regimes, since the inference process is taken into account in the context of the evaluation of graph patterns over graphs."
+
+S2c: What do you mean by "applying the inference process context of the fixed windows"? I guess you mean it is computed based on the content of a window, but it is hard to understand.
+
+S2d: In 2.2 it sounds like the forgetting that is a natural part of windows is a problem. I would argue that the whole point of a window is to allow a user to define in what temporal context a statement should be evaluated. The semantics of the query is directly dependent on the window definition. If you want to reason over a longer horizon you either have to create a larger window or use a window-less method, like the logic-based stream reasoning approach [46].
+
+S2e: The works on logic-based stream reasoning presented in Section 3.2.1 are also examples of stream level entailment. The work in [46] for example only process each stream element once and there is no need to store any previous elements as the necessary history is implicitly encoded in the formula.
+
+Section 3
+S3a: Regarding 3.1.1, there is work on spatio-temporal stream reasoning for example:
+Fredrik Heintz and Daniel de Leng. Spatio-Temporal Stream Reasoning with Incomplete Spatial Information. Proc. ECAI 2014.
+Daniel de Leng and Fredrik Heintz. Qualitative Spatio-Temporal Stream Reasoning With Unobservable Intertemporal Spatial Relations Using Landmarks. Proc. AAAI 2016.
+
+S3b: I don't understand what separates "analytics-aware stream reasoning" from other forms of stream reasoning. It seems that the main thing is that they are based on a cloud infrastructure. The type of reasoning could be provided in other stream reasoning approaches as well. That said, analytics is definitely one of the main uses of stream reasoning (therefore most approach ought to be "analytics-aware").
+
+S3c: Is there a difference between an API and a query language? Both are ways of interacting with a system, one using a formal language the other function calls (and I guess in most cases sending a query is also a function call).
+
+S3d: Why do you consider all CEP-based stream reasoners to care about ontology axioms? Most CEP-engines don't. This is another example where the semantic web perspective is clear (which is fine, as long as it is made clear that the focus is on semantic web type reasoning, which it currently isn't).
+
+S3e: There is no "ontology inference process" in the reference architecture. Why is one needed in all stream reasoners?
+
+S3f: How can the separation "safeguard" the complexity? Do you get a different total complexity if you split up the problem in two parts, or are you actually solving a different problem?
+
+S3g: How can a fact still be relevant if it is outside the window? By the semantics of a window only the information inside it matters. If the user had a different intention she should write a different query. The semantics of windows is well-defined, so nothing outside can be relevant (unless the semantics is incorrect).
+
+S3h: How can the semantics of forgetting be more precise? A window is a precise definition of what information is relevant. Yes, there are queries which can not be expressed with windows, so there is definitely a need for other constructions to capture these. This would extend the formalism which would allow more expressive queries to be asked, but I'm not sure I consider that "improving the quality of the engine answers" since the initial answer was perfectly correct given its semantics.
+
+S3i: In 3.2.1, why is OWL necessary?
+
+S3j: In 3.2.2, what do you consider the model to be in stream reasoning? It is not clear to me. If you have a query for selecting some elements from a stream, what is the model?
+
+S3k: In 3.3, yes this has been done. There are some papers on semantic streams such as FUSION'13, IROS'13, SCAI'15...
+Daniel de Leng and Fredrik Heintz. Ontology-Based Introspection in Support of Stream Reasoning. Proc. SCAI 2015.
+Daniel de Leng and Fredrik Heintz. Towards On-Demand Semantic Event Processing for Stream Reasoning. Proc. FUSION 2014.
+Fredrik Heintz. Semantically Grounded Stream Reasoning Integrated with ROS. Proc. IROS 2013.
+Fredrik Heintz and Daniel de Leng. Semantic Information Integration with Transformations for Stream Reasoning. FUSION 2013.
+
+S3l: In 3.4, you state that stream reasoning will not reach the performance of stream processing, what is the different in your opinion? There is no definition of either, so it is hard to argue for this claim.
+
+S3m: Last sentence in 3.4.1, of course you can do things faster if you have an incorrect solution. Just return nothing for every query, it can't be faster (and probably not much more incorrect either). A reasoner without correctness guarantee is not a reasoner, it is poor hack.
+
+S3n: In 3.4, there is plenty of work on how to guarantee the resource usage of stream reasoning in the runtime verification literature. The main concept is trace-length independence. If a reasoner is trace-length independent then its growth is bounded even on infinite traces/streams. A new concept, event-rate independence, has recently been suggested for reasoners that is neither dependent on the trace length nor the rate of events (number of events per time-unit). See for example Online Monitoring of Metric Temporal Logic by Hsi-Ming Ho, Joël Ouaknine and James Worrell from Runtime Verification (RV) 2014.
+
+S3o: In 3.4, windows should not be used to control resource usage but to define the semantics of a query.
+
+S3p: In 3.5.1, semantic matching as described in the references in S3k is another approach.
+
+S3q: In 3.5.1, work on sychronization of streams have been done as described in Chapter 7.8 in Fredrik Heintz. DyKnow - A Stream-Based Knowledge Processing Middleware Framework. PhD Thesis 2009.
+
+S3r: In 3.5.1, how does RSEP-QL relate to the reference model proposed in this paper?
+
+S3s: In 3.5.2, there is plenty of work done in the areas of reasoning about action and change and belief revision that could be used as a basis for further research.
+
+S3t: In 3.5.2, there is also plenty of research on reasoning with temporal intervals, Allen's Interval Algebra is probably the best known work, that could be used for further research.
+
+The language of the paper can be improved. A detailed list of comments is available as a PDF document.

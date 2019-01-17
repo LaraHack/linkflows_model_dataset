@@ -1,0 +1,55 @@
+Overall Impression: Good
+Suggested Decision: Accept
+Technical Quality of the paper: Good
+Presentation: Good
+Reviewer`s confidence: Medium
+Significance: Moderate significance
+Background: Comprehensive
+Novelty: Limited novelty
+Data availability: All used and produced data are FAIR and openly available in established data repositories
+Length of the manuscript: The length of this manuscript is about right
+Summary of paper in a few sentences: 
+
+This paper argues the view that the knowledge graph (linked open data) should be used as the default data model for machine learning. A number of simple learning use-cases are used to motivate this view.
+
+The first two sections of the paper introduce the concept of knowledge graphs as a representation format for data in general, and its inherent advantages. The third section illustrates, with the use of examples, how the representational formalism of knowledge graphs circumvent some problematic issues in machine learning, in particular the need for feature engineering and the biases that come with it.
+
+Section four represents a summary of the main challenges to using knowledge graphs as the default data model for machine learning and section five gives an overview of some of the ways in which current machine learning approaches consume knowledge graphs.
+
+Reasons to accept: 
+
+The paper is very convincing in its argument for knowledge graphs as a machine learning data model. The linkage of related datasets in the knowledge is especially attractive because it associates, by default, more related features to the learning algorithm that would otherwise have to be discovered manually through feature engineering in a raw data setting.
+
+The examples are simple and clear and they appropriately demonstrate the advantages of knowledge graphs as machine learning data model. The paper is well structured and well written in general.
+
+Reasons to reject: 
+
+While the argument for knowledge graphs is well executed, the last third of the paper falls away slightly in its quality. Section 5 in particular mostly gives some technical details for current approaches for consuming knowledge graphs. There is no great detail in the shortcomings of these approaches or where improvement is needed. There needs to be more clarity in this regard.
+
+Furthermore, while I was convinced by the cleaner and more structured representation format of knowledge graphs, as well as the associated reasoning properties, I couldn't help but wonder why there is no mention of evaluations for knowledge graph approaches to machine learning. Why are there no evaluations mentioned to test the accuracy of predictions made with these approaches? If there aren't any substantial evaluations or comparisons then why aren't there any?
+
+Further comments: 
+
+While there are some shortcomings in the paper, the positives for me outweigh the negatives just enough for acceptance.
+
+Minor suggestions / issues:
+
+Page 1 - perhaps deep learning and feature engineering can be given some citations or short definitions?
+Page 4 - "...disjoint with the class Animals..." -> "disjoint with the class Animal..."?
+Page 4 - Integrated, dereferencable and disambiguated knowledge -> would have been nice to have quick examples to illustrate these concepts (space permitting)
+Page 7 - "...use one of the many available imputation methods..." -> citations?
+Page 7 - "...can become problematic when having to deal with a large number of them..." -> citations / example?
+Page 7 - "...often by a factor of ten..." -> citation / example?
+Page 7 - "... Knowledge graphs follow the OWA..." -> Perhaps a simpler definition for OWA is that missing information is not assumed to be false?
+Page 7, Section 4.2 - "...represent explicit statements as well as background knowledge that be used to derive implicit statements..." -> We can also derive implicit background knowledge using reasoning engines. E.g. explicit statement: john is a man, background knowledge: man is a human, human has two legs. We can derive the implicit statement: john has two legs, but we can also derive implicit background knowledge: man has two legs
+Page 8 - "...we have no way knowing of how..." -> "...we have no way OF knowing how..."
+Page 8 - "...As an example, consider once more use use..." -> "As an example, consider once more the use..."
+Page 8, Section 4.4 - "...This in contrast to non-literal resources, here their local neighbourhood is the 'value'..." -> Rewrite
+Page 8, Section 4.5 - "...countless of subgraphs..." -> "...countless subgraphs..."
+Page 8, Section 5 - "...community began..." -> "...community begun..."
+Page 9, Section 5.1 - "...Tensors are the generalization..." -> "...A tensor is the generalization of a matrix into..." OR "...Tensors are generalizationS of matriCes into..."
+Page 9, Section 5.1 - "this tensor model as layer" -> "this tensor model as A layer"
+Page 9, Section 5.2.1 - "they can equally well be" -> "they can be equally well"
+Page 10 - "which generates features vectors" -> "which generates feature vectors"
+Page 10 - "and then proceed to used" -> "and then proceed to use"
+Page 10 - "The GCN model..." -> (Figure number missing)

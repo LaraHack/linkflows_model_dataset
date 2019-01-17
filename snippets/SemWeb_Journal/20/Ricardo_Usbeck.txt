@@ -1,0 +1,41 @@
+Suggestion: 
+Minor Revision
+Review Comment: 
+The paper extends a NED algorithm presented at CIKM 2014 by three aspects, namely a simpler optimization goal, a tuning for a learning to rank algorithm and a deeper experimental value. However, the paper is a bit outdated (see citations) and does not make use of the data infrastructure for repeatable and understandable science which has been created since 2014. I recommend updating the paper as it has a significant contribution and is well-written. Furthermore, I would like to see source code or a demo or a web-service as it is a nice contribution but will only be used by the community if it is somewhere out there for the sake of science. A last point, the paper is only slightly related to the topics of this journal, especially with respect to Linked Data and Semantic Web.
+
+Positive points
+Figure 1 is an excellent example to introduce the problem and give a first idea of the solution.
+Section 4 is well-written and easy to understand.
+Datasets used are available at https://www.dropbox.com/sh/8h108mim7rwprwj/AADXNtjN_KjVoN2XhfvceK4ra (Licencing?) However, I doubt that hosting such datasets in dropbox is of value for the community. Please consider hosting it at datahub or the like.
+Another really interesting point is the discussion of the used datasets and the performance analysis in table 2.
+Section 5.5 is well-written and gives a good overview of why most NED approaches fail.
+
+Major issues
+No evaluation done via GERBIL. GERBIL is an community-accepted online platform for archiving and comparing experiments using semantic annotation tools, see http://gerbil.aksw.org/gerbil/ Your experiments should be easily repeatable and extended to a wide range of tools and datasets. For example, compare yourself against http://www2016.net/proceedings/proceedings/p927.pdf
+Your related work seems to be considerably outdated. Especially, you have only 1 work of 2014 and only 2 of 2013. Within the last two years and especially since the uprise of online benchmark frameworks like BAT, NERD, and GERBIL, there have been a dozen new approaches not covered here.
+How did you account for overfitting your L2R algorithm using only 3 datasets without splits? Especially, how large is the fraction in L2R-Self if for example datasets have only 20 documents?
+How exactly do you tackle outdated URIs and Wikipedia IDs in your datasets? This has a great influence on how systems perform. Especially, if the competing systems were trained on other version of the underlying KB.
+Section 1.1.: Following your definition of NED, any approach is unable to identify if a mention does not (yet) exist in an knowledge or the mention is an entity at all. Please clarify w.r.t. emerging entities and rejection of entity mentions. Section 2.1 You introduce NIL, but is it used for non-existing entities or out-of-KB entities?
+Why do you use Boosted Regression Trees? How do other models perform?
+Why do you introduce a Learning to Rank Algorithm? Please motivate in the beginning of Section 4.2
+
+Minor issues
+Please list exactly the classes of entities your tool is able to link/disambiguate.
+Please define what a KB is exactly.
+Please define what a mention is exactly.
+P2, left column, missing citation of local vs. global disambiguation methods (Cucerzan et al. 2007)
+P3, Contribution 3, what does ‘meaningful’ mean?
+P4, an NER process -> a NER process
+P4, what should |M| stand for?
+P4, can you please give an intuition what “normalized” means?
+P4, please clarify G w.r.t. neighbour nodes. How does the depth of the surrounding influence your algorithm. See further ‘AGDISTIS - Graph-Based Disambiguation of Named Entities Using Linked Data’ by Ricardo Usbeck, Axel-Cyrille Ngonga Ngomo, Michael Röder, Daniel Gerber, Sandro Athaide Coelho, Sören Auer, and Andreas Both in The Semantic Web -- ISWC 2014
+P5, In iteration i, we assign to mention m_i => shouldn’t that be mention m_j because m_i would mean that you can only have number of operation many mentions?
+P6, ...disambiguation pages.To keep => ...disambiguation pages._To keep
+P6, please clarify that you mean node degree in wikilinks if you speak about degree
+P6, xperimental => experimental
+P8, the threshold for NIL assignments should be mentioned earlier since this is an important plus point for your algorithm
+P9, GLOW [28]: It seems to me that there is missing a word in the description of the approach
+
+Post scriptum:
+Using only accuracy to report performance gains does not capture the full reality since only f-measure also captures how often your algorithm overperforms, see http://nlpers.blogspot.de/2007/10/f-measure-versus-accuracy.html
+Please do not hesitate to contact me directly to discuss.

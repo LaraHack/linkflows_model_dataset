@@ -1,0 +1,144 @@
+
+Suggestion: 
+Minor Revision
+Review Comment: 
+This article focuses on improving both energy efficiency and user comfort in tertiary buildings. It aims to do this with a semantic prediction assistant, which combines the latest and greatest of a number of domains, including semantic web technologies (SWT), data mining, Internet of Things (IoT), Building Information Modelling (BIM), Knowledge Discovery in Databases (KDD). The approach is clearly documented, and tested in one building in Spain.
+
+Overall impression:
+-------------------
+(1) originality
+In general, this is an innovative paper, as it deploys a whole array of technologies in its use case, while staying true to the nature of these technologies, AND to the use case. Real life tests are also made, making the approach also very tangible and realistic. It is clear from the text that the real-life test helped to improve the proposed approach.
+
+(2) significance of the results
+The resulting Semantic Prediction Assistant approach can likely be used quite widely in the facility management sector. Furthermore, several areas are mentioned in the paper where the approach can further be improved, including specific directions and initial proposal, thus leaving significant room for further research.
+
+(3) quality of writing
+The paper is well structured in general. There are some repetitive paragraphs / sentences (last paragraphs of section 3.2, second half of section 4), so I encourage the authors to make the paper more concise and stronger in these parts. There are a number of language 'errors', see bottom.
+
+Detailed remarks:
+-----------------
+
+1. Introduction
+2. Related work[NO -S]
+- This overview of related work is great and much appreciated!
+- About ifcOWL (which is very well described, thank you), you indicate: "it is of secondary importance that an instance RDF file can be modelled from scratch using the ifcOWL ontology and an ontology editor." This is correct. Later on in the paper (it is probably too complex for that, like IFC in general), this is used as an argument to not use ifcOWL, and instead use classes and properties in a new EEPSA ontology. Note, however, that it IS possible to create RDF graphs from scratch using ifcOWL, especially if it is only building-storeys-spaces-elements, and less geometry and properties. So, you argument does not hold, in my opinion. In your case, it is probably entirely feasible to use (a part of) ifcOWL.
+- It might be worthwhile to indicate that IFC is used in construction industry, and, as a result, it is not that "space-oriented". It rather focuses on building objects (walls, doors, floors, ...), and their relations and geometries. Simply because of that reason, it is usually not the most comfortable ontology to start from.
+- You refer to simplifications and extensions to ifcOWL, mainly pointing towards ifcWOD. It is correct that such simplifications (less extensions: IFC is quite extensive already) are being looked for. ifcWOD is such an example, but the ifcWOD ontology does not exist as far as I know (as you indicate). An alternative approach worthwhile mentioning is the simpleBIM approach documented in https://biblio.ugent.be/publication/8041826. Also in this case, no ontology exists, unfortunately. An ontology IS available for the REALLY simple Building Topology Ontology (BOT - https://w3c-lbd-cg.github.io/lbdw/bot/2016/11/index-en.html), which is probably quite well usable in your use case. The aim for BOT is to enable use cases such as yours, while keeping a link to full ifcOWL representations of buildings (properties and geometry). It consists only of 5 or so classes, and some basic proporties that allow to model the core building topology (building-storeys-spaces-elements). As such, it probably answers part of your needs.
+
+3. EEPSA in KDD Support
+- The transition from Section 2, ending with all the ontologies, into Section 3, is not obvious. Try to include some form of textual transition. Furthermore, none of the ontologies mentioned in Section 2 is really repeated after Section 2. Instead, all data is "linked to the EEPSA ontology" (second paragraph of Section 2). This comes as a surprise, as this EEPSA ontology has not been introduced by then. Some kind of impression is given of the EEPSA ontology in Section 3.1 (as a combination of a number of other ontologies), but also that is not so explicitly done. In my opinion, there is room to improve the paper by tackling all this in the beginning of Section 3.
+- I am not that sure of the term "linking phase". Would it not be better to call this "semantic annotation phase"? Or "structuring data phase"? It is not really about linking, it is about making data available in RDF graphs following selected ontologies (many ontologies besides EEPSA). Right?
+- Thanks for including links to ontology sources in footnotes. Much appreciated.
+- Thanks for listing all SPARQL queries in the appendix. Much appreciated. I think you miss a namespace and prefix for "bif:" in Listing 3.
+- 3.1: The DogOnt was not used because it aims at residential buildings, whereas you aim at tertiary buildings. This is very odd. Can you indicate what is so special about residential buildings that is not available in tertiary buildings (and the reverse) for your particular use case? How does this affect the EEPSA ontology, for example?
+- 3.1, third paragraph: When mentioning "it has been decided to offer a simpler way to model a space", you probably arrived right into the domain of the BOT ontology (see above). This BOT ontology does not list huge numbers of building element types (in fact, it lists none), but it can easily be extended in this direction. In my opinion, this is worth considering. This approach will likely also form a way into ifcOWL that is better than "to translate all the building modelling concepts defined in the EEPSA ontology into the ifcOWL representation". BOT is intended to link quite directly into ifcOWL, as well as SAREF and other ontologies.
+- 3.3: This is definitely not my main area of expertise, but I am somewhat confused why "pre-processing" is mainly about the topic of "outlier detection". Furthermore, as you indicate, outlier detection has never been really looked into by semantic web researchers. It is also not really explained how outlier detection is implemented here. If you ask me, a large part of this section deals with classifying outliers, rather than with finding outliers. The only thing I see is "The class eepsa:Outlier is defined as a subclass of ssn:Observation in the EEPSA ontology in order to represent observations that do not conform to the expected behaviour". Then what? There is no actual outlier detection involved here. Can you give an example (perhaps you can point it out in Listing 2?)? As a result, this section is more about classification of data using SPARQL queries, not really outlier detection? Why make it more complex than that?
+- 3.3: For the classification of data, you consider SPARQL CONSTRUCT queries. Did you consider rule languages (SWRL) to encode the clear IF-THEN rules? That would seem to be the more obvious choice?
+- 3.3: This section finally ends with a statement about 'data quality'. How is that related to the rule-checking and outlier detection that dominates this entire section?
+- 3.4: "For those cases: an alternative is offered in the form of rules." => Can you please provide an example? Has this been tested in the evaulation use-case?
+- 3.6: This interpretation step is very important. This is indicated as a potential area of further research, in which the EEPSA ontology can prove to be an invaluable resource. I somewhat doubt this. This interpretation step will likely need domain knowledge the most, which resides in the end user's mind, not in the ontology that has already been used. Well, it is not really in scope anyway, so ignore this comment as you wish.
+
+4. EEPSA on the loop
+- This section explains the entire EEPSA process again (good!). One step is only briefly explained, namely the 'preprocessing' stage. This is again the outlier detection step. The explanation of this step in Section 3.3 was already quite confusing (see above). This one paragraph in Section 4 ("The next step is ...") only adds to the confusion. Can you please expand on this step and clarify how it happens and what is useful for? An example might help. You indicate that "results obtained after applying these rules are in section 5.3". Why not just place them here?
+- Towards the end of page 10, you indicate that the data collected in the data selection phase has "low quality". The reason for that is only really mentioned in section 5.3 (namely the anomalous detection of the temperature sensor). Please already mention this in Section 4, so that it is clear from the start.
+- Towards the end of the section, you indicate that a 6 month time span is chosen. This looks entirely random, mainly because the actual use case and experimental setup has not been introduced yet in its entirety. This only happens in Section 5.1. It seems to me that Section 4 and 5 flow too much in each other. They both have aspects of the actual use case evaluation in Eibar; they both make claims/evaluations about the EEPSA process (cfr. comment above); they both explain systems and components used; the end of section 4 is somewhat repetitive. I recommend to restructure these two sections, separating the EEPSA on the loop process; the use case experimental setup; the evalation; and the discussion of results. Restructuring will hopefully make the entire section more concise, direct, and stronger. The experimental setup will likely have to come entirely in the beginning of Section 4.
+
+5. Evaluation and results discussion
+- At the outset of 5.3, you indicate that there is [little] room for improvement in the experiment, as the baseline is already quite good. Would it not make sense to perform the experiment for another building instead / as well? How is the test on the BEC going? How is the baseline over there? Any preliminary results available that can show the effect of your proposal?
+
+6. Conclusions
+- "First of all, data is linked to the EEPSA ontology" -> As indicated above, I think it would be more worthwhile to phrase this as "data structuring" - "semantic enrichment", rather than "linking". Furthermore, I suggest to indicate the external ontologies that you use as well, instead of only using the EEPSA ontology.
+- "the proposed process is reusable in similar use cases of the same domain due to its hgih abstraction level." => You don't have any proof to support this claim, as you only document one test in Eibar. If this is so, would this approach also be usable for non-tertiary buildings?
+- "it should be translated into the ifcOWL ontology" => A translation will be difficult. I would rather suggest to link direct into an ifcOWL dataset. I would go through an in-between ontology, such as the BOT ontology (see above). Other than that: this is indeed a very good suggestion for future work!
+- "[The] EEPSA ontology should be completed with more detailed information to reflect the effect of materials or building envelope sealing" => I agree, but rather than extending EEPSA, it will likely be a better approach to tap in to IFC data, which has a lot of such detail available, both in terms of property sets (PSETs) and of geometry. This complicates matters fast and a lot, which is why you probably want to keep it out of the core EEPSA (and why we keep it out of the core BOT ontology).
+- Out of curiosity, as this is actually outside the paper scope: the end of the conclusion calls for an intuitive GUI. This will likely require a 2D drafting or 3D modelling package, or perhaps a BIM tool? Is this the intention? Or would you opt for an online web-tool with simplified 2D modelling GUI?
+
+Textual remarks:
+----------------
+
+The word 'besides' is very often used, typically in the beginning of the sentence. This sounds very non-academic. Please use another word for each of these. "Furthermore" is often the better alternative.
+
+1. Introduction
+- "it is necessary a system" -> "a system is needed"
+- "during the operation of [a] building"
+- "leading [to] the extraction of useful knowledge"
+- "can be summarized as [] follows"
+- "a projection of the data to a form [with which] data mining algorithms can work"
+- "and models derived, [in support of decision making processes]
+- "Figure1" -> "Figure 1"
+- "[The] EEPSA process"
+- consider copyright for Figure 1.
+
+2. Related work[NO -S]
+- "deals with the representation of [] functional and "
+- "all these knowledge" -> "all this knowledge"
+
+3. EEPSA in KDD Support
+- 3.1: "data-analysts" -> "data analysts"
+- 3.2: "subset[s] of variables"
+- 3.2: "which [] additional knowledge [] can be extracted from the data []."
+- 3.2: "in most cases, [] domain-specific knowledge is needed"
+- 3.2: "and it is inferred that, apart from its indoor factors (such as temperature and humidity) might have its indoor temperature affected by the received solar radiation, as well as the elevation and direction of the sun" => something went wrong here, please reformulate.
+- 3.2: "type of space is [] analysed"
+- 3.2: "That is why[,] although a subset of variables is suggested, the data analyst is the one who must decide [the final data selection]."
+- 3.2: "space-type" -> "space type"
+- "Besides"...
+- 3.2: "[The] EEPSA process uses OWL inferences"
+- 3.2: "SPARQL queries [are] also provided"
+- Why is there a section 3.3.1 if there is no section 3.3.2? Please remove this unnecessary section header.
+- 3.3: "a very researched topic" -> "an often studied topic"
+- 3.3: "which are [] essential component[s]"
+- 3.3: "in which [it] takes place"
+- 3.3: "Rules [have a corresponding] expression in natural language"
+- 3.3: "In this stage, [the] EEPSA process"
+- 3.4: "know which [alternative] data sources [are available for] that variable
+- 3.4: "[The] EEPSA process"
+- 3.4: "[In addition], [a] data analyst [can also] use SPARQL rules to infer"
+- 3.5: "with views" -> "in his aim"?
+
+4. EEPSA on the loop
+- "from now on referred [to] as"
+- "and [in which] over 200 people work"
+- "in [the] Tibucon project"
+- "([] when [the] workday starts)"
+- "to meet [the] facility manager's requirements"
+- "to the EEPSA ontology, [the] Ontop tool has been used"
+- "can be queried with [the] SPARQL language while staying [available] as relational DB"
+- "is inferred from [the] EEPSA ontology"
+- "During [the] preprocessing phase"
+- "[This] information is also collected"
+- "which weather station [he] chooses"
+- "that affect[s] the open space"
+- "so [the] first step is to check"
+- "Figure[ ]2"
+- "time[ ]spane"
+- "the RapidMiner Studio 7.1 version ha[s] been used"
+- "[T]he Series extension [has also been used] in order to work with time series"
+
+5. Evaluation and results discussion
+- 5.1: "the Open Space[] comes from three Tibucon"
+- 5.1: "the use of [the] EEPSA process"
+- 5.1: "This baseline's result[]" or "[These] baseline's results"
+- 5.2: "[A] baseline experiment"
+- 5.2: "window-size" -> "window sizes"
+- 5.2: "[the] available data pool became larger"
+- 5.2: "and their window[ ]sizes [were] fine tuned"
+- 5.2: "[The] most accurate model was built"
+- Figure 2 should be inserted as a Table.
+- 5.3: "the MAE [by] 0.16°C"
+- 5.3: "Data selection suggested incorporating [variables] to the predictive model which a data analyst [not expert] in the domain may overlook"
+- 5.3: "device located outdoors[] had 4,209 [anomalous] temperature observations[]."
+- 5.3: "in [a] more adequate place"
+- 5.3: "with the application of [the] EEPSA process"
+- 5.3: "obtained and incorporated [into] the predictive model"
+- 5.3: "[The] baselin model's MAE lowered"
+- 5.3: "from 05:00 a.m. on[ward], even without activating [the] HVAC system"
+- 5.3: "simulation is incorrect and[,] consequently[,] [the] facility manager's HVAC activation strategy [should not rely] on it."
+
+6. Conclusions
+- "[The] data analyst is guided"
+- "in [the] form of new attributes"
+- "should [] be translated"
+- "[The] EEPSA ontology should be completed"
+- "necessary knowledge regarding missing values imputation methods" -> please reformulate. Imputation methods??
+- "[The] interpretation phase has a big potential"

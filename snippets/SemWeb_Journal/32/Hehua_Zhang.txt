@@ -1,0 +1,9 @@
+
+Suggestion: 
+Minor Revision
+Review Comment: 
+Energy efficiency prediction of buildings is an important research topic. Data mining techniques are widely researched and applied to fulfill this goal. However, it is not easy to understand and select required variables appropriately. Domain specific knowledge are often necessary to obtain ideal prediction results.
+
+This paper presents a semantic prediction assistant approach, which takes good use of a domain ontology "EEPSA", to help the variable selection, decision making in the KDD process for energy efficiency prediction. The idea is novel and interesting on constructing the "EEPSA" ontogoly and applying them to improve prediction accuracy for the specific problem. The experiments compared the performance between the method with and without EEPSA. The results show that with the priori knowledge of EEPSA, the method can get better accuracy. On the other hand, the manuscript was well organized and written.
+
+However, since the EEPSA ontology takes the predominant role in the method, the authors should explain more about the EEPSA ontology. It is not clear how the EEPSA is designed and evaluated for its usability? It is also unclear how to ensure or measure the correctness and completeness of EEPSA? Furthermore, the SPARQL rules are writen manually, which makes the assistant hard to use for non-experts. Although it is declared as a semi-automatic method, I think the usability of the method should be considered. I suggest a higher-level description of the rule, and generated the SPARQL queries automatically.

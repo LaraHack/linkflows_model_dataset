@@ -1,0 +1,30 @@
+Overall Impression: Average
+Suggested Decision: Reject
+Technical Quality of the paper: Average
+Presentation: Weak
+Reviewer`s confidence: High
+Significance: Moderate significance
+Background: Reasonable
+Novelty: Limited novelty
+Data availability: Not all used and produced data are FAIR and openly available in established data repositories; authors need to fix this
+Length of the manuscript: The authors need to elaborate more on certain aspects and the manuscript should therefore be extended (if the general length limit is already reached, I urge the editor to allow for an exception)
+Summary of paper in a few sentences: 
+
+This position paper in essence advocates for the importance of team science but more importantly in order to encourage the activity in must be recognised and rewarded in academic/research staff performance review. This is valid point but the paper could be more convincing with respect to structuring its arguments. I like the topic but it needs some more work.
+
+Reasons to accept: 
+
+Well written
+Team science is an important issue and I will a publication that is not concerned with a technical experiment but is concerned with scholarship with respect research skills and professional development of the research scientist (data scientist)
+Relevant in that this is paper is concerned with the (academic/research) practitioner of data science.
+I argue that perspectives on the an emerging field such as this should be encouraged.
+Good related work.
+
+Reasons to reject: 
+
+Referencing is little confusing. Either footnotes/citations?
+There is what appears to be a quote from Dr. Julie Segre. This should be surrounded by "". Its not clear to me if the author is referring to her or someone else. The later is not acceptable for quote in a publication.
+The is not well structured. There are no sections.
+The author states the problem - but does not go into detail about possible causes and or/what methods are needed to verify explore this problems wrt to credit/promotion further. What can be found in related literature from other disciplines. How does one claim credit for scientific team work in other disciplines such as physics. How can team science skills be measured? What does the literature say with respect to other disciplines. I cant imagine that this is not a new problem but rather needs some detective work in other disciplines under the scholarship of research/academic practice
+
+Further comments: 

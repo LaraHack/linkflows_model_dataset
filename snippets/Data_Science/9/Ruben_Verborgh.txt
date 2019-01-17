@@ -1,0 +1,79 @@
+Overall Impression: Good
+Suggested Decision: Accept
+Technical Quality of the paper: Excellent
+Presentation: Good
+Reviewer`s confidence: Medium
+Significance: High significance
+Background: Comprehensive
+Novelty: Limited novelty
+Data availability: With exceptions that are admissible according to the data availability guidelines, all used and produced data are FAIR and openly available in established data repositories
+Length of the manuscript: The length of this manuscript is about right
+Summary of paper in a few sentences: 
+
+In this article, the authors present an extensive survey of the state of the art of stream reasoning, followed by an analysis of which topics have been covered so far and which topics need more attention. The article appears to be very complete and the analysis is well done and carried out in depth. The introduced model is a clear and simple one to structure the discussion.
+
+Reasons to accept: 
+
+– comprehensive survey
+– comprehensive analysis of the domain, with solved and open questions
+– technically clear
+– well written
+
+Reasons to reject: 
+
+– not clearly a vision paper, lacks visionary statements; rather a survey
+– insufficient discussion about Big Data, deep learning, benchmarking/evaluation, pull/push
+
+Further comments: 
+
+This article appears less to me as a “vision” article, but more as a survey and a critical assessment of the domain’s current status. The vision aspect is a rather careful (but well founded) discussion, which I certainly would call useful but not visionary—there are no remotely wild novel ideas in there. Given the broadness of the discussed work, I think it makes sense to reclassify this as a survey paper, which contains a perhaps atypically long “open questions” section, but this it not unexpected given the relatively young age of stream reasoning. Then again, perhaps the importance for the Data Science journal of such labels is perhaps minimal, so maybe it is not that big of an issue. Nonetheless, I would suggest to rethink the title and make it reflect the scope of the article better.
+
+Overall, the article certainly has sufficient quality to be accepted; however, I suggest some minor points of revision below.
+
+GENERAL
+– The connection between reasoning and Big Data analytics, and reasoning and deep learning, is only very lightly touched upon (mostly in 3.2.2). Given the importance of these technologies, it seems necessary to compare more intensively. Especially if this is considered to be a vision for the future, the interaction of these domains seems like a subject too big to ignore.
+
+– For a survey paper, a major missing area is evaluation/benchmarking. The point is touched upon in the conclusion, but the authors never elaborate on it.
+
+ABSTRACT
+– phrasing: "the next future"
+
+INTRODUCTION
+– “In this article, we introduce a reference model for stream reasoning, which we use to summarize and organize the results the research has obtained so far.” => Looks like evidence to call this a survey rather than a vision.
+
+– The introduction starts with motivating use cases, but it is not clear to what extent these scenarios a) have been solved b) have been solved with stream reasoning c) will be solved in the near future d) will be solved with stream reasoning e) need to be tackled with stream reasoning as opposed to other techniques (especially machine learning, for instance regarding traffic jams).
+
+– What is the source of the 9 R’s?
+volume/velocity/variety are traditional Big Data V’s, for instance.
+
+– What is the relation/difference between R2 and R6? Coping with velocity seems to be directly related to providing answers in a timely fashion, i.e., any system can handle high velocity data if we slow down that data—but the answers will arrive too late. This difference would need to be made explicit; also note that R2 and R6 appear to be coupled in Table 1.
+
+– The label for R9, “understand what users want” inaccurately vague. It is not about “understanding” or interpretation of users’ intent at all; instead, it is about the flexibility to define certain query types. It is necessary to change this label into something more accurate.
+
+– I found the comparison paragraph below the requirements rather hard to follow. Table 1 does a better job on the comparison; it would perhaps be clearer to start out with the table and discuss the different types of systems in different paragraphs.
+
+– In Table 1: by only indicating the “true” values (V) and hiding the “false” values (F), the table presents the same information in a much more scanable way. Also; try to make the columns narrower so the marks are closer, facilitating visual comparison.
+
+– In Table 1, consider renaming SemWeb into OBDA to align with the caption and the text.
+
+– typo: “a oil-rig”
+– typo: “These system where”
+
+A REFERENCE MODEL FOR STREAM REASONING
+– “When items are represented through RDF (e.g. an RDF graph)” => the notion of a “graph” seems strange here. What is the graph? The entire stream, or a single element? In the former case, I would say that the RDF definition of “graph” is not aligned with the notion of a stream; in the latter case, to what extent would it be meaningful to do so?
+
+– The two last paragraphs of 2.1.1 are hard to follow; perhaps a comparison table might make sense.
+
+– typo: "a temporal criteria" => "a temporal criterion"
+
+OPEN PROBLEMS AND RESEARCH QUESTIONS
+– 3.2.1: Why is it important to investigate other approaches? What is missing fro OWL 2 DL that other languages can/should bring to the table?
+
+– 3.5.1 push/pull is a discussion that, in my opinion, needs its own place at an earlier point in the article. They are now only casually mentioned, but have a major impact.
+
+– The statement that “stream processing has always coped with noise” seemingly contradicts Table 1.
+
+CONCLUSION
+– This section, unfortunately, disappoints, especially for a vision paper. What does the analysis of the article mean to the audience? The third paragraph summarizes a couple of trends and predictions, but does not really point to concrete action points or emerging fields that require a close follow-up. I expect more advice and inspiration, and perhaps even criticism or suggestions on a meta-level. For instance, the authors write that “it is necessary to develop benchmarking and evaluation activities” (a topic, by the way, that is not covered elsewhere), without pointing at a direction in which authors should think/look to do so.
+
+– Similarly, the last paragraph about “real problems and scenarios” is very limited. Where will stream reasoning make a real difference according to the authors? This is a very important question with a visionary aspect that is absent from the conclusion.

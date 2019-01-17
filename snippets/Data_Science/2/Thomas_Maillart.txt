@@ -1,0 +1,27 @@
+Overall Impression: Average
+Suggested Decision: Undecided
+Technical Quality of the paper: Good
+Presentation: Good
+Reviewer`s confidence: Medium
+Significance: High significance
+Background: Reasonable
+Novelty: Clear novelty
+Data availability: All used and produced data are FAIR and openly available in established data repositories
+Length of the manuscript: The length of this manuscript is about right
+Summary of paper in a few sentences: 
+
+In this position paper, the author elaborates on conflict forecasting and its limits, as well as on the origins of the interest for forecasting, i.e., (i) for the sake of scientific validation of theories, (ii) to update beliefs for the intelligence community or (iii) perhaps more tentatively, to prevent wars. The variety of forecasting methods ranging from expert, data driven (mainly econometric), models and the wisdom of crowds are carefully described with their respective advantages and limits. The manuscript then develops into a discussion on the possibility to predict wars, and finally brings advocacy for prediction attempts (failed or successful) as a research agenda.
+
+Reasons to accept: 
+
+Topic wise, forecasting and prediction is at the heart of the data science idea. Application to wars and conflicts brings a clear additional human/social/political dimension, which is of high interest. On the technical side, current forecasting/prediction methods currently used are thoroughly described, which makes this paper highly informative for a reader with interest on the topic. In particular, the paper informs on the availability and also scarcity of data streams available for prediciton, and how meta-data may be used (i.e., financial market data, prediction markets). Finally, conceptual and technical limits to predictions are addressed.
+
+Reasons to reject: 
+
+The points below are more a wishlist for improvements than "reasons to rejects" :
+- forecasts and limits of predictions encompasses much more than just wars and conflicts. For instance, to take a topic I am quite familiar with, in the field of complex systems physics, heated debates have occurred on financial market bubble crashes (see http://www.sciencedirect.com/science/article/pii/S0378437113004342 and related upstream and downstream papers). This is added by a sort of rampant philisophical question : should scientists make predictions at all? Successful prediction could result from chance, and is not necessarily a token of model robustness. Yet compatible with the scientific process, failed predictions may harm reputation. In other words, predictions may be seen by the scientific community as a form of misplaced arrogance. In a nutshell, I would recommend to expand reflection (i) upstream by considering ouststanding issues associated with the limits of predictions, beyond the field of conflicts and (ii) downstream on the morale / ethical issues associated with predictions at broad (e.g., predictions are also the realm of artifical intelligence).
+- It would be great for the purpose of publishing in Data Science, that the author sets an agenda for a practice of data science (incl. transparency, systematic collection and public release of evidence, cooperation and contests, i.e., coopetition), in a way that it would help, at least partially, alleviate the problems associated with the limits of predictions of conflicts, and perhaps beyond. Along with a critical view, of what the data science standards cannot do to help better predictions.
+
+Further comments: 
+
+Let me use this field to conclude. I am overall supportive of this paper, but I feel it could be fixed to (i) be more self-consistent, and (ii) to better raise future challenges, as well as to (iii) improve the integration of the problem in the practice of data science. As said, predictions and their limits is very timely topic beyond conflicts (think e.g., of the major miss in the US Elections predictions/forecasts, as well as Brexit). By taking a broader view, the paper could appeal to an even broader audience. On the above appreciations, I have set *overall impression* to *average*, to stress that the paper needs some conceptual, background, and outlook improvements, and I have already set *significance* and *novelty* to high conditional that the paper will be fixed according to these line. If anything is unclear, please don't hesitate to reach out directly.

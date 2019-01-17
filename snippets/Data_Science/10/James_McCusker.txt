@@ -1,0 +1,29 @@
+Overall Impression: Excellent
+Suggested Decision: Accept
+Technical Quality of the paper: Excellent
+Presentation: Good
+Reviewer`s confidence: High
+Significance: High significance
+Background: Reasonable
+Novelty: Clear novelty
+Data availability: All used and produced data (if any) are FAIR and openly available in established data repositories
+Length of the manuscript: The length of this manuscript is about right
+Summary of paper in a few sentences: 
+
+This paper proposes the need for and development of what we might call "wisdom" in AI: the ability for AI systems to know the limits of their own knowledge, incorporation of context, ethical considerations, networked AI, and similar needs that minimize the role of AI in scientific research. The author provides a number of examples of initial work in each of these areas that can be built upon to make progress towards making AI a more effective partner in scientific research.
+
+Reasons to accept: 
+
+This paper proposes an expansion of AI research into areas that make it a more active participant in scientific research. Each of the areas have initial prior work that these efforts can build upon. By laying out these challenges, this will be an excellent paper to cite when introducing research that addresses some of these needs. The related work is not complete, but thorough, which is appropriate for a position paper like this.
+
+Reasons to reject: 
+
+None
+
+Further comments: 
+
+" I developed the Scientific Paper of the Future (GPF) Initiative..."
+
+Why is GPF the acronym for this? Shouldn't it be SPF?
+
+While I can't come up with a better name, it seems like the concept "ThAIS" seems to only encompass the Thoughtfulness principle, while in reality it tries to cover much more (all 7 principles). This might need to be addressed in section 5, where the 7 principles are laid out, or some term other than "Thoughtful" might be needed either for ThAIS or for the Thoughtfulness principle.

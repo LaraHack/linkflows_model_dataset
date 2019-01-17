@@ -1,0 +1,58 @@
+Overall Impression: Weak
+Suggested Decision: Reject
+Technical Quality of the paper: Weak
+Presentation: Good
+Reviewer`s confidence: Medium
+Significance: Low significance
+Background: Reasonable
+Novelty: Lack of novelty
+Data availability: All used and produced data (if any) are FAIR and openly available in established data repositories
+Length of the manuscript: The length of this manuscript is about right
+Summary of paper in a few sentences: 
+
+The author stresses the need for a fully-featured AI 'partner' to support scientists during the entirety of their work. According to the author, this is needed because scientific questions are getting more difficult to solve and require more complex means to do so. Also, human beings have limitations which the AIs do not (and vice verse). Therefore, the author proposes a 'partnership' between scientists and AI, with the latter being thoughtful artificial intelligence systems (ThAIS). These should support in gathering data, determining tasks, running experiments, evaluating results, publishing papers, etc. In the 2nd half of the paper, the author describes this proposed system with the help of 7 principles, claiming that, while they have already been tackled separately, we must work toward an ideal that combines these principles into one.
+
+Reasons to accept: 
+
+The author correctly identifies several key issues with the current scientific research climate:
+- the fragmentation within and between fields
+- the lack of proper and complete documentation (for reproduction)
+- human fallacies
+- the need for good support tools
+
+Also, the author proposes an interesting set the principles which he or she believes is needed to succeed with ThAIS.
+
+Reasons to reject: 
+
+The paper is more focussed on telling us that we need these AIs than it is telling us on why this is needed and how we would accomplish this. The 'how' is almost entirely missing, apart from several references to the author's own work, and the 'why' feels reaching and is supported by questionable claims. Concretely, the 'why' can be summarized in 2 reasons: 1) because scientific work is getting more complex and thus needs a fully-featured AI support tool, and 2) because humans make mistakes and have limitations. Neither of these two reasons explain why we need fully-featured AIs, rather than task-specific support tools.
+
+The proposed ThAIS feels reached in that it should do about everything and should also do it perfectly. Only from section 6 onwards does the author downplays this somewhat by describing the principles behind the idea, and while these help to put it in perspective they are only described as high-level goals which could be filled in a multitude of ways.
+
+Without a very convincing 'why' and preferable initial thoughts of the 'how', this papers feels more like a very opinionated piece which goes further into speculation than what is acceptable of a (position) paper. Also, there is an over-abundant use of comparatives and superlatives ('novel', 'better', 'more advanced', 'goes beyond', 'bring to a new level', etc) without the discussion to support them. Finally, the paper is inconsistent with tenses: the introduction reads as if ThAIS are already among us, the body as if they are near, and the conclusion as if there is still a long and difficult road ahead.
+
+Further comments: 
+
+[P2]
+The author claims that scientific questions are becoming more complex, and supports this by comparing finding a cure for polio to that of cancer: 'easy' and accomplished by one scientist versus complex and worked on by many. Undoubtedly, the two diseases are different in complexity, but whether their comparison supports the claim is arguable. Of course, only the more complex problems remain once more simple ones are solved, but there are also enough current-day simple problems that have no need for a fully-featured AI. I understand what the author is trying to covey, but this comparison does a poor job reflecting it. Rather, I would suggest writing something about new discoveries leading to a better understanding (and new tools) which leads to yet more discoveries ad infinitum, and that this is what makes research more complex over time.
+
+[P3]
+Similarly, the LHC was not just constructed to find the Higgs boson. It might have been a good motivator (especially if you believe the media) but it was more about new technologies allowing scientists to scale up their experimental set-up. Also, the discovery of the Higgs boson is indeed a scientific discovery of an importance that occurs only occasionally, but it wasn't the surprise this paragraph seems to convey. Of course, the LHC is a good example of a collaborative scientific achievement, but it does not explain the pressing need for ThAIS.
+
+[P4]
+The table is labelled and referred to as figure. While possible of course, the caption should in that case be at the bottom.
+Also, I do not understand the added value of its content. There is also little discussion about the works cited, except that they are diverse. Sure, there is other research that addressed various key tasks, but these are often domain and task specific. Is this what this table is telling me?
+
+[P5]
+"Humans have limited resources"
+True, but the same holds for AIs; they just have more resources. Still, coping with resource limitations in general is largely an ongoing problem with AIs. As one of four key points that compares AIs with humans, this one is quite arguable. Especially them 'covering all spaces of choices without ignoring any details' would quickly explode into an unsolvable problem.
+
+[P6]
+"When people write scientific papers, they tend to focus on the big picture and not include details. Sure some details are not important, but others are and should be mentioned."
+Indeed, important details should be mentioned, but I doubt that omitting them from papers is caused by scientists forgetting them. Rather, max paper length and target audience are more likely reasons in my opinion. Of course, reproducibility is vital, but this does not necessarily follow from lack of attention.
+
+Section 5: no need to define the acronym once again.
+
+[P7-9]
+What is responsible behaviour? And appropriate behaviour/response? These are all vague terms which heavily demand on the use case.
+Also, 'can understand questions'? How? via scripts? structured texts? NLP? audio?
+The whole section is written like this: vague term with little explanation.

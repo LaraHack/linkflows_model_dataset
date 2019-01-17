@@ -1,0 +1,23 @@
+Overall Impression: Excellent
+Suggested Decision: Accept
+Technical Quality of the paper: Excellent
+Presentation: Excellent
+Reviewer`s confidence: High
+Significance: High significance
+Background: Reasonable
+Novelty: Clear novelty
+Data availability: All used and produced data are FAIR and openly available in established data repositories
+Length of the manuscript: The length of this manuscript is about right
+Summary of paper in a few sentences: 
+
+In this position paper, the author presents his view on the current state knowledge-based data science and most importantly, the shortcomings which need attention moving forward. The paper nicely provides a brief outline about the representation of biomedical knowledge, from ontologies to using the semantic web. The author then moves to frame the state of knowledge-based inference while providing context for logical inference, inference from ontology annotation and biomedical literature, as well as hypothesis generation. After framing the current state of knowledge-based data science in the biomedicine context, the author then provides very insightful opinions regarding the open challenges in the field.
+
+Reasons to accept: 
+
+The paper is very well outlined, it provides a brief window of the relevant literature for the new practitioner to get a grasp on the state of the field. It also provides very concise insight into the current issues and major directions of the state of the field for existing researchers. The open questions posed in this paper are very interesting and relevant potential research directions that should be clear to people entering the field or looking for new problems to address.
+
+Reasons to reject: 
+
+NA
+
+Further comments: 

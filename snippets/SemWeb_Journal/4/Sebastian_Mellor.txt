@@ -1,0 +1,21 @@
+Suggestion: 
+Minor Revision
+Review Comment: 
+The authors or this survey clearly outline the common and additional features, along with limitations, in 5 of the larger, cross-domain, publicly available knowledge graphs. The authors ultimately suggest that a score can be determined for each considered KG based on the requirements to a particular purpose. Throughout the survey requirements are detailed such that a reader should be able to make informed decisions about the importance of each.
+
+Having sufficient technical experience in most areas discussed in the survey, while also being a relative novice with regard to these particular datasets, I believe that I am a suitable target audience for this survey, my review is written as such.
+
+Firstly, with regards to the Freebase KG, would the authors be able to provide updated information regarding the current state of API and data migrations?
+
+Regarding quality and trustworthiness of the data I feel there could be more explanation of Provenance of facts and Quality ensurance. Re: provenance in particular, could the authors briefly expand upon how one might use the provenance to determine the trustworthiness? Could Table 3 outline the fields that are available for each KG, e.g., userid, source reference? Re: quality ensurance, is it possible to describe each KG in comparable terms rather than no, trusted, depends, 95%? This may not be feasible but I would appreciate an authors response as some guidelines for evaluating quality/trust would also aid in assessing further KG resources.
+
+A key limitation of the available KGs appears to be the varying domain specificity and the lack of descriptions. Table 8 (Decision matrix) does not highlight the Covered domains (Table 1) for each KG, from the author's descriptions users of the OpenCyc KG would have different requirements to the other 4 and thus little choice - is this correct? When referencing table 8 alone, excluding that row could be misleading.
+
+Other questions raised earlier in the survey were subsequently answered such as "What would one be required to do to interface all KGs with SPARQL?". Overall, this survey is well written, readable, and clear. I would only additionally ask that the authors perform some additional proof reading to address any minor spelling or grammatical mistakes such as:
+
+p12, col1, middle "(i) is only duable" -> "doable"
+p23, 8. Outlook, "limited extend so far." -> "extent"
+
+The survey also approaches issues related to linking open data such as the requirements to align entities and schemas. It would be good to see future work along the lines of rating the suitability of certain data sets to being successfully (or partially) linked. Clearly much work has already been done in unifying many sources, but the issue of specificity of knowledge covered by particular sources highlights the concern of one single KG not being sufficient to a purpose - although this may be out of the scope of the current survey article.
+
+I see this survey paper as being valuable as a reference when assessing new or additional knowledge graphs and building a more complete overview, and equally valuable as a thorough introduction to available KG data sets and how one might be able to use them. For these reasons I feel the article should be accepted.

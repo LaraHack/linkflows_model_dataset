@@ -1,0 +1,155 @@
+Overall Impression: Excellent
+Suggested Decision: Accept
+Technical Quality of the paper: Good
+Presentation: Excellent
+Reviewer`s confidence: High
+Significance: High significance
+Background: Reasonable
+Novelty: Limited novelty
+Data availability: All used and produced data are FAIR and openly available in established data repositories
+Length of the manuscript: The length of this manuscript is about right
+Summary of paper in a few sentences: 
+
+The paper provide a review of the field and tries to assess the limitations of conflict forecasting (especially in regard to conflict onset).
+
+Reasons to accept: 
+
+I have read the manuscript `Conflict Forecasting and it Limits' with great interest and there is much to like about the manuscript. I recommend publication condition on minor changes that I will outline below:
+
+1) I think the manuscript has to be more transparent about the fact that many conclusions in regard to the predictability of conflict relate mainly conflict onset. This is never explicitly stated, but especially during the interesting differentiation between clocks, clouds, and black swans this becomes obvious. Another way to address this would be to evaluate whether one could put different conflict variables (conflict escalation, duration, occurrence, outcome, or location of conflict) in different categories of predictability. E.g. location might be more of a clock like mechanism, while onset might be a black swan. E.g. Ward et al. 2013 focus on the occurrence of conflict and can present fairly good prediction performance.
+
+2) I would like the author to expand a bit on how outcomes that cannot be predicted can be explained (p2).
+
+3) I think there are several claim in the paper that need to be backed up with citations. E.g.:
+- p2: `Prediction has typically been considered as unscientific' (by whom?)
+- p2: `..papers that strongly improve prediction... are routinely rejected' (is that personal experience or actually happening?)
+- p3: mentions work on neural networks that provide accurate prediction. Is this Phil Schrodt's work?
+- p4: 'the fields of international conflict and civil war, the majority of the this work has until recently relied on structural variables' (citations are missing)
+- p4: citations for ICEWS and TABARI are missing (see below for reference)
+- p5: `more generally on news-based sources, have scored some predictive successes' (there need to be more citations and especially earlier work on this. See citations below)
+
+4) On page 8 there is a discussion that it might be harder to attain point precision forecasts when actors behave strategic. I agree with this assessment, but strategic models will be able to provide us with a probability space of behavior that could be leveraged in forecasts. This related to a more general point: The manuscript generally focuses more on point predictions than on probability forecasts. It is not clear why the manuscript focuses on point predictions.
+
+5) I think the manuscript is generally ignoring some of the foundational work on conflict forecasting and also some important current contributions. I am providing a list of important contributions that should be integrated into the manuscript to provide a fair assessment about the successes in forecasting. This can demonstrate that the field has made incredible advances, which might provide a more positive outlook on what we might be able to do in the future:
+
+Schneider, Gerald, Gleditsch, Nils Petter, and Carey, Sabine (2011). Forecasting in International Relations: One Quest, Three Approaches. Conﬂict Management and Peace Science, 28(1):5–14.
+
+Ward, Michael D., Metternich, Nils W., Dorﬀ, Cassy L., Gallop, Max, Hollenbach, Florian M., Schultz, Anna, and Weschle, Simon (2013). Learning from the Past and Stepping into the Future: Toward a New Generation of Conﬂict Prediction. International Studies Review, 15(4):473–490.
+
+Schrodt, Philip A. and Gerner, Deborah J. (2000). Cluster-based Early Warning Indica¬tors for Political Change in the Contemporary Levant. American Political Science Review, 94(4):803–817.
+
+Brandt, Patrick T. and Freeman, John R (2006). Advances in Bayesian Time-series Mod¬eling and the Study of Politics: Theory Testing, Forecasting, and Policy Analysis. Political Analysis, 14(1):1–36.
+
+O’Brien, Sean P. (2002). Anticipating the Good, the Bad, and the Ugly: An Early Warning Approach to Conﬂict and Instability Analysis. Journal of Conﬂict Resolution, 46(6):791– 811.
+
+Doran, Charles F. (1999). Why Forecasts Fail: The Limits and Potential of Forecasting in International Relations and Economics. International Studies Review, 1(2):11–41.
+
+Schrodt, Philip A. (1991). Prediction of Interstate Conﬂict Outcomes Using a Neural Net¬work. Social Science Computer Review, 9(3):359–380.
+
+Azar, Edward E . McLaurin, RD., Havener, Thomas, Murphy, Craig, Sloan, Thomas, and Wagner, Charles H. (1977). A System for Forecasting Strategic Crises: Findings and Speculations about Conﬂict in the Middle East. International Interactions, 3(3):193–222.
+
+Brandt, Patrick T., Freeman, John R., and Schrodt, Philip A. (2014). Evaluating Forecasts of Political Conﬂict Dynamics. International Journal of Forecasting, 30(4):944–962.
+
+Rummel, Rudolph J. (1969a). Forecasting International Relations: A Proposed Investigation of Three-mode Factor Analysis. Technological Forecasting, 1(2):197–216.
+
+Ray, James Lee and Russett, Bruce (1996). The Future as Arbiter of Theoretical Controver¬sies: Predictions, Explanations and the End of the Cold War. British Journal of Political Science, 26(04):441–470.
+
+Gerner, Deborah J., Schrodt, Philip A., and Yilmaz, Ömür (2009). Conﬂict and Mediation Event Observations (CAMEO) Codebook. Available
+
+Azar, Edward. (1980). The Conﬂict and Peace Data Bank (COPDAB) Project. Journal of Conﬂict Resolution, 24(1):143–152.
+
+King, Gary and Zeng, Langche (2001). Improving Forecasts of State Failure. World Politics, 53(4):623–658.
+
+O’Brien, Sean P. (2010). Crisis Early Warning and Decision Support: Contemporary Approaches and Thoughts on Future Research. International Studies Review, 12(1):87–104.
+
+Boschee, Elizabeth, Jennifer Lautenschlager, Sean O'Brien, Steve Shellman, James Starz, Michael D. Ward, 2015, "ICEWS Coded Event Data", http://dx.doi.org/10.7910/DVN/28075, Harvard Dataverse, V10.
+
+Weidmann, Nils B. and Ward, Michael D. (2010). Predicting Conﬂict in Space and Time. Journal of Conﬂict Resolution, 54(6):883–901.
+
+Shellman, Stephen, Hatﬁeld, Clare, and Mills, Maggie J. (2010). Disaggregating Actors in Intranational Conﬂict. Journal of Peace Research, 47(1):83–90.
+
+Clauset, Aaron, Young, Maxwell, and Gleditsch, Kristian Skrede (2007). On the Fre¬quency of Severe Terrorist Events. Journal of Conﬂict Resolution, 51(1):58–87.
+
+Brandt, Patrick T., Colaresi, Michael, and Freeman, John R. (2008). The Dynamics of Reciprocity, Accountability, and Credibility. Journal of Conﬂict Resolution, 52(3):343–374.
+
+Gurr, Ted Robert and Lichbach, Mark Irving (1986). Forecasting Internal Conﬂict: A Competitive Evaluation of Empirical Theories. Comparative Political Studies, 19(1):3–38.
+
+Gleditsch, Kristian Skrede and Ward, Michael D. (2013). Forecasting is Diﬃcult, Especially about the Future: Using Contentious Issues to Forecast Interstate Disputes. Journal of Peace Research, 50(1):17–31.
+
+Bell, Sam R., Cingranelli, David, Murdie, Amanda, and Caglayan, Alper (2013). Co¬ercion, Capacity, and Coordination: Predictors of Political Violence. Conﬂict Management and Peace Science, 30(3):240–262.
+
+Harﬀ, Barbara (2003). No Lessons Learned from the Holocaust? Assessing Risks of Genocide and Political Mass Murder since 1955. American Political Science Review, 97(1):57–73.
+
+Goldsmith, Benjamin E., Butcher, Charles R., Semenovich, Dimitri, and Sowmya, Arcot (2013). Forecasting the Onset of Genocide and Politicide: Annual Out-of-sample Forecasts on a Global Dataset, 1988-2003. Journal of Peace Research, 50(4):437–452.
+
+Bremer, Stuart A. (1989). Computer Modeling in Global and International Relations: The State of the Art. Social Science Computer Review, 7(4):459–478.
+
+Choucri, Nazli and Robinson, Thomas W. (1978). Forecasting in International Relations: Theory, Methods, Problems, Prospects. WH Freeman, San Francisco
+
+Hughes, Barry B. (2001). Choices in the Face of Uncertainty: The International Futures (IFs) Model. Futures, 33(1):55–62.
+
+- Various Journal of Peace Research special issue articles on conflict forecasting: Online First
+
+Reasons to reject: 
+
+5) I think the manuscript is generally ignoring some of the foundational work on conflict forecasting and also some important current contributions. I am providing a list of important contributions that should be integrated into the manuscript to provide a fair assessment about the successes in forecasting. This can demonstrate that the field has made incredible advances, which might provide a more positive outlook on what we might be able to do in the future:
+
+Schneider, Gerald, Gleditsch, Nils Petter, and Carey, Sabine (2011). Forecasting in International Relations: One Quest, Three Approaches. Conﬂict Management and Peace Science, 28(1):5–14.
+
+Ward, Michael D., Metternich, Nils W., Dorﬀ, Cassy L., Gallop, Max, Hollenbach, Florian M., Schultz, Anna, and Weschle, Simon (2013). Learning from the Past and Stepping into the Future: Toward a New Generation of Conﬂict Prediction. International Studies Review, 15(4):473–490.
+
+Schrodt, Philip A. and Gerner, Deborah J. (2000). Cluster-based Early Warning Indica¬tors for Political Change in the Contemporary Levant. American Political Science Review, 94(4):803–817.
+
+Brandt, Patrick T. and Freeman, John R (2006). Advances in Bayesian Time-series Mod¬eling and the Study of Politics: Theory Testing, Forecasting, and Policy Analysis. Political Analysis, 14(1):1–36.
+
+O’Brien, Sean P. (2002). Anticipating the Good, the Bad, and the Ugly: An Early Warning Approach to Conﬂict and Instability Analysis. Journal of Conﬂict Resolution, 46(6):791– 811.
+
+Doran, Charles F. (1999). Why Forecasts Fail: The Limits and Potential of Forecasting in International Relations and Economics. International Studies Review, 1(2):11–41.
+
+Schrodt, Philip A. (1991). Prediction of Interstate Conﬂict Outcomes Using a Neural Net¬work. Social Science Computer Review, 9(3):359–380.
+
+Azar, Edward E . McLaurin, RD., Havener, Thomas, Murphy, Craig, Sloan, Thomas, and Wagner, Charles H. (1977). A System for Forecasting Strategic Crises: Findings and Speculations about Conﬂict in the Middle East. International Interactions, 3(3):193–222.
+
+Brandt, Patrick T., Freeman, John R., and Schrodt, Philip A. (2014). Evaluating Forecasts of Political Conﬂict Dynamics. International Journal of Forecasting, 30(4):944–962.
+
+Rummel, Rudolph J. (1969a). Forecasting International Relations: A Proposed Investigation of Three-mode Factor Analysis. Technological Forecasting, 1(2):197–216.
+
+Ray, James Lee and Russett, Bruce (1996). The Future as Arbiter of Theoretical Controver¬sies: Predictions, Explanations and the End of the Cold War. British Journal of Political Science, 26(04):441–470.
+
+Gerner, Deborah J., Schrodt, Philip A., and Yilmaz, Ömür (2009). Conﬂict and Mediation Event Observations (CAMEO) Codebook. Available
+
+Azar, Edward. (1980). The Conﬂict and Peace Data Bank (COPDAB) Project. Journal of Conﬂict Resolution, 24(1):143–152.
+
+King, Gary and Zeng, Langche (2001). Improving Forecasts of State Failure. World Politics, 53(4):623–658.
+
+O’Brien, Sean P. (2010). Crisis Early Warning and Decision Support: Contemporary Approaches and Thoughts on Future Research. International Studies Review, 12(1):87–104.
+
+Boschee, Elizabeth, Jennifer Lautenschlager, Sean O'Brien, Steve Shellman, James Starz, Michael D. Ward, 2015, "ICEWS Coded Event Data", http://dx.doi.org/10.7910/DVN/28075, Harvard Dataverse, V10.
+
+Weidmann, Nils B. and Ward, Michael D. (2010). Predicting Conﬂict in Space and Time. Journal of Conﬂict Resolution, 54(6):883–901.
+
+Shellman, Stephen, Hatﬁeld, Clare, and Mills, Maggie J. (2010). Disaggregating Actors in Intranational Conﬂict. Journal of Peace Research, 47(1):83–90.
+
+Clauset, Aaron, Young, Maxwell, and Gleditsch, Kristian Skrede (2007). On the Fre¬quency of Severe Terrorist Events. Journal of Conﬂict Resolution, 51(1):58–87.
+
+Brandt, Patrick T., Colaresi, Michael, and Freeman, John R. (2008). The Dynamics of Reciprocity, Accountability, and Credibility. Journal of Conﬂict Resolution, 52(3):343–374.
+
+Gurr, Ted Robert and Lichbach, Mark Irving (1986). Forecasting Internal Conﬂict: A Competitive Evaluation of Empirical Theories. Comparative Political Studies, 19(1):3–38.
+
+Gleditsch, Kristian Skrede and Ward, Michael D. (2013). Forecasting is Diﬃcult, Especially about the Future: Using Contentious Issues to Forecast Interstate Disputes. Journal of Peace Research, 50(1):17–31.
+
+Bell, Sam R., Cingranelli, David, Murdie, Amanda, and Caglayan, Alper (2013). Co¬ercion, Capacity, and Coordination: Predictors of Political Violence. Conﬂict Management and Peace Science, 30(3):240–262.
+
+Harﬀ, Barbara (2003). No Lessons Learned from the Holocaust? Assessing Risks of Genocide and Political Mass Murder since 1955. American Political Science Review, 97(1):57–73.
+
+Goldsmith, Benjamin E., Butcher, Charles R., Semenovich, Dimitri, and Sowmya, Arcot (2013). Forecasting the Onset of Genocide and Politicide: Annual Out-of-sample Forecasts on a Global Dataset, 1988-2003. Journal of Peace Research, 50(4):437–452.
+
+Bremer, Stuart A. (1989). Computer Modeling in Global and International Relations: The State of the Art. Social Science Computer Review, 7(4):459–478.
+
+Choucri, Nazli and Robinson, Thomas W. (1978). Forecasting in International Relations: Theory, Methods, Problems, Prospects. WH Freeman, San Francisco
+
+Hughes, Barry B. (2001). Choices in the Face of Uncertainty: The International Futures (IFs) Model. Futures, 33(1):55–62.
+
+- Various Journal of Peace Research special issue articles on conflict forecasting: Online First
+
+Further comments: 

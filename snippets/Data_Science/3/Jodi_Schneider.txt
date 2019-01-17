@@ -1,0 +1,42 @@
+Overall Impression: Good
+Suggested Decision: Accept
+Technical Quality of the paper: Good
+Presentation: Average
+Reviewer`s confidence: High
+Significance: High significance
+Background: Comprehensive
+Novelty: Clear novelty
+Data availability: Not all used and produced data are FAIR and openly available in established data repositories; authors need to fix this
+Length of the manuscript: The length of this manuscript is about right
+Summary of paper in a few sentences: 
+
+This paper advocates for intellectual diversity in data science, drawing inspiration from ensemble methods and the benefits of aggregating over diverse (but not homogeneous) crowds. Points about the "undercurrents of fashion and conformism in the methods researchers are expected to use" are well-taken, and this is made concrete with specific evidence on the relevance of diversity from a number of different disciplines. Similarly, the downsides of rewarding individual accuracy are usefully discussed.
+
+Reasons to accept: 
+
+The overall statistical perspective here is probably uncontroversial in a certain (statistical) audience but deserves attention from a wide, general audience, which this paper is well-pitched to reach. The authors' expertise is usefully built upon, especially in Section 1 and in the Conclusion.
+
+Reasons to reject: 
+
+Section 2 would benefit from work to strengthen the argument. It relies heavily on a single article in preparation by the authors which is currently not readily publicly available: "J. Huisman and O. Woolley-Meza. Ultra-peripheral links drive structural instability in complex contagion. in preparation, 2017.". In fact, the bibliography also contains a second manuscripts for which no public preprint is referenced.
+
+It would be beneficial to either present the fuller argument from this (unseen) manuscript, or alternative sources for the evidence that "recent work shows that the most effective way to transfer ideas between communities is through connections made between individuals that are more peripheral rather than through those better connected [15]".
+
+Data underlying Figure 1 should be further specified, ideally with a data set that others could immediately reuse. See http://datasciencehub.net/guidelines.html and in particular http://journals.plos.org/plosone/s/data-availability
+
+The discussion on incentives is relatively shallow; by contrast a science policy perspective might draw examples (perhaps even using citation analysis) to show the downsides of rewarding individual accuracy.
+
+Further comments: 
+
+Page 1: Is NIPS attendance data public? Are there citable figures here? That would strengthen the argument and make it more legible to future readers.
+Page 3: Consider renumbering references to match the bibliography order.
+Page 4: Add a citation regarding the "famous examples of damaging group think, such as Tulip Fever, the South Sea Bubble and other stock market booms and busts"
+Page 6: it's --> its and "consistent each other" --> "consistent with each other"
+The caption for Figure 2 should cite [15].
+Page 7: lowercase "Boosting"? A space is needed after the comma in [14,21].
+
+References need a thorough edit. e.g.:
+Capitalize for [5], [21], and [35]: Belkor, Netflix, Russian
+Preprints are needed if you are reasonably going to cite [15] and [29]
+Use consistent capitalization for arXiv, and provide the paper number for [21]
+Something has gone wrong in the very last line (e.g. Nature Communications)
