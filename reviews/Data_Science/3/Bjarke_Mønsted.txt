@@ -1,0 +1,40 @@
+Overall Impression: Average
+Suggested Decision: Undecided
+Technical Quality of the paper: Weak
+Presentation: Good
+Reviewer`s confidence: Medium
+Significance: Low significance
+Background: Comprehensive
+Novelty: Lack of novelty
+Data availability: All used and produced data are FAIR and openly available in established data repositories
+Length of the manuscript: The length of this manuscript is about right
+Summary of paper in a few sentences: 
+
+The paper addresses the strength of diversity in available models in data science. The authors claim that one threat to such diversity is the tendency of certain methods to be in fashion, at the expense of other models. Certain mechanisms are proposed to avoid this, such as maintaining a network structure among researchers in which smaller communities may further develop novel methods which may then be used in conjunction with existing methods, rather than a network structure in which superior performance of one single method leads to its global adoption. Another such proposed mechanism is setting up incentives, economic and otherwise, for the development of methods which do not necessarily perform well in general, but outperforms existing models in cases where the latter perform poorly.
+
+Reasons to accept: 
+
+The paper addresses an important topic, and one that is within a broad interpretation of the journal's scope (i.e. 'how to analyse [data] in a way that allows new insights'). The point that incentives should favor approaches that perform well in cases where otherwise superior approaches perform poorly is an interesting and clearly directly applicable insight.
+
+Reasons to reject: 
+
+While within a broad interpretation of the journal's scope, the paper presents neither concrete methods or results pertaining to data analysis, nor any new clear, concise proposals as to how diversity in data science can be increased, as the aforementioned use of incentives has already been proposed in a previous work by one author.
+The paper also fails to provide comprehensive evidence that lack of diversity is in fact a problem. The paper uses as an example the Netflix Prize Competition, in which an ensemble of diverse methods provided a superior solution, but this seems contrary to the point previously mentioned, as this seems a case of an existing competition providing incentives towards a diverse approach rather than one single method.
+
+In some cases, sources are lacking to either back up factual claims, or to elaborate on nomenclature.
+Some examples of the former:
+- On page 3, 7 sources are cited to back up claims about the superiority of collective versus individual intelligence in humans and animals, whereas there is no citation on the superiority of statistical ensemble models, which is the one case that is of direct concern to this paper.
+- Also, on page 4: "The community [...] is also subject to social forces that discourage a diversity of approaches." There is no source to back up this claim, which seems particularly strange since we've just been presented with an example of researchers that were indeed rewarded for opting for a diverse approach in the Netflox competition.
+An example of the latter:
+- On page 6: "Scientific ideas and publications exist in a quasi-market, where some are accorded a high value and attract high rewards." The exact meaning of this is not clear to me - it should be elaborate precisely what existing in a quasi-market means and how it relates to the previous claims.
+
+Furthermore, there are unfounded claims regarding the interplay between network structure and idea spreading, e.g. in the caption for figure 2: "This is the topology that best sustains the global penetration of diverse ideas that are fostered locally."
+
+For figure 1: It is unclear to me why the authors normalize counts to 100. If I understand the procedure correctly, this normalization entails simply dividing each monthly count by max(count), so the graph retains its shape, but the actual number of counts is obscured. I don't see any reason to remove this information.
+
+Finally, there are a few cases of typos and omitted words:
+"The has been a huge increase" -> "There has been a huge increase"
+"Analyzing the networks of scientific can reveal" -> "Analyzing the networks of scientific interactions [presumably] can reveal"
+"reasons to be weary" -> "reasons to be wary"
+
+Further comments: 

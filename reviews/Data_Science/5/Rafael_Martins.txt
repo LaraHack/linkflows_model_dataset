@@ -1,0 +1,29 @@
+Overall Impression: Good
+Suggested Decision: Accept
+Technical Quality of the paper: Good
+Presentation: Excellent
+Reviewer`s confidence: Medium
+Significance: High significance
+Background: Reasonable
+Novelty: Limited novelty
+Data availability: All used and produced data are FAIR and openly available in established data repositories
+Length of the manuscript: The length of this manuscript is about right
+Summary of paper in a few sentences: 
+
+The paper defends the position that visualization techniques should be valued as important scientific artifacts in the field of data science. It does that by exploring, in general terms, what is a visualization, how visualizations are designed, what is their importance, and how they can help with the exploration of large amounts of complex scientific data. The author uses omics data visualization as an example of knowledge domain where visualization techniques can be useful tools for scientists.
+
+Reasons to accept: 
+
+The goal of the paper is to defend a position, as described above (that visualizations are important scientific artifacts) and it does that well. It is well supported by good references, it explores the subject in a broad yet objective manner, and succeeds to communicate its point. It is very well written and easy to read and understand. Finally, it fits well in its role as editorial / position paper, introducing a concept without going too deep in specific problems and challenges. For this reason, I believe that the balance is in favor of the paper's advantages, so I recommend the acceptance of the paper.
+
+Reasons to reject: 
+
+I believe there are no strong reasons to reject the paper. As a disadvantage, I'd mention that I believe that some parts could have been better explored. The paper mentions that the visualization of omics data is at its core, but very few concrete examples were described, and even those in very few details. I feel that, if possible, the author should have described one or two concrete cases of omics visualization in more details, in order to make the paper's position stronger. Most of the text is developed with general visualization in mind.
+
+Further comments: 
+
+Reasonable background:
+For being a position paper/editorial, I understand that the paper is not supposed to cite the absolute state-of-the-art works on the area, but instead it should use a good set of examples. In that case the paper succeeds. Still, I was left with an overall feeling that the author is not deeply acquainted with the publication venues for visualization, specially when she mentions that "...visualization research can be overlooked and not interpreted as a valuable publishable scientific effort." Maybe she means that, for this specific venue (Data Science), that is the case; if that is so, I can understand the statement and agree with it.
+
+Limited novelty:
+It is a position paper/editorial, so I expect that it is not supposed to be novel.

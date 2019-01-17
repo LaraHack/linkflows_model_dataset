@@ -1,0 +1,37 @@
+Overall Impression: Good
+Suggested Decision: Accept
+Technical Quality of the paper: Good
+Presentation: Good
+Reviewer`s confidence: Medium
+Significance: High significance
+Background: Reasonable
+Novelty: Clear novelty
+Data availability: All used and produced data are FAIR and openly available in established data repositories
+Length of the manuscript: The length of this manuscript is about right
+Summary of paper in a few sentences: 
+
+This is a fascinating discourse on the need to combine methodologies, to not get too caught up in trends, to apply the right approaches for the right tasks, and to leverage team science approaches to advance the newly sexy field of data science. The paper is an intriguing perspective piece, and makes for interesting and compelling reading.
+
+Reasons to accept: 
+
+It is a very interesting subject and we should all be thinking more about these issues as we go about our business of "data science".
+
+Reasons to reject: 
+
+none
+
+Further comments: 
+
+This is a fascinating perspective piece and I enjoyed reading it. The manuscript details a variety of characteristics that are both faulty and needed within the emergent and interdisciplinary field of data science (albeit some if existing activities under new guises). The manuscript is both advisory, but also cautionary. My mostly minor comments have to do with adding additional references and examples, and clarifying and/or narrowing the language and topics so as to be more impactful in its message.
+
+1.	Consider in the introduction, citing the Oceans of Data profiling of a “data scientist” http://www.oceansofdata.org/ or other similar efforts, there are many and these are very useful in even understanding what is different about a data scientist in today’s world vs other related fields (though I agree with the authors about rebranding some of these concepts).
+2.	A few other examples of “bubbles of interest”, might be included, and in fact these can be seen even more specifically based upon citation analysis, such as in Greenberg 2009, or regarding drug development: doi:10.1038/470163a https://arxiv.org/pdf/1102.0448.pdf and many others
+3.	There are also some nice examples of issues in applying the correct/best methods or statistical biases in sharing methods/data. Examples: http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0026828 http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.100... and many others… should provide a diversity of examples, for example best data visualization approach.
+4.	The Netflix example of needing ensemble models, to take advantage of different approaches is excellent and easily digestible by anyone reading – and deeply highlights the need for changes in attribution, incentive structures, and team formation approaches to better our collective intelligence. Similarly, the jury decision making process.
+5.	Some concerns about this comment, or rather, perhaps it could be clarified a bit. “The culture of benchmarking one’s new method against the state of the art in terms of accuracy necessitates that researchers utilize the best currently available methodologies if they wish to get their work published.” Unfortunately, the benchmarking is often performed far too narrowly or poorly, and not using the best approaches available (because we are too narrow minded to think outside our current bubble) – justifying publication but not really showing significant advancement or corroboration. I think this is what the authors actually mean but perhaps could be stated more clearly. Some great examples of this on Lior Pachter’s blog.
+6.	Given the nature of the types of interaction a data scientist might have, it might be nice to include citations/examples from more recent efforts to represent these, such as in github: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4975729/ or perhaps Wikidata or other technical interaction contexts. We simply must get beyond using citations as the primary method for inferring social transfer of knowledge.
+7.	The contagion idea is very compelling, but it doesn’t take into account any other factors, such as expertise or its similarity across a social network.
+8.	The incentives to experiment or be in the minority are important to describe, but seem to hang at the end, in terms of how one can ensure their inclusion within ensemble frameworks or other team dynamics that are the primary focus of the recommendations and themes of the manuscript. There is some discussion of including weak classfiiers, but in general this ending section could be made more robust with another example and a bit more discussion.
+9.	There are many aspects of “data science” that are not discussed here. Perhaps it should be mentioned more explicitly that the focus is on methods and their popularity, and need for collaborative work in their use/testing.
+10.	I agree with this comment: Thus, increasing connections between scientists working at the periphery, in communities that are typically distant, could be a promising new way of fostering a diverse set of ideas and integrating them for innovative science.” However, much of the conclusion focuses too much in my opinion, on hiring/funding incentives and less on the actualities of collaboration. I agree with these opinions, but just that they seem to distract from the main take home messages – especially the one quoted above.
+11.	The conclusion is very wandering – suggest reorganizing to be more on target with the excellent points raised in the manuscript.

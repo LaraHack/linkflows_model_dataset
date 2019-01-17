@@ -1,0 +1,29 @@
+Overall Impression: Average
+Suggested Decision: Undecided
+Technical Quality of the paper: Average
+Presentation: Average
+Reviewer`s confidence: High
+Significance: Moderate significance
+Background: Reasonable
+Novelty: Limited novelty
+Data availability: All used and produced data are FAIR and openly available in established data repositories
+Length of the manuscript: The length of this manuscript is about right
+Summary of paper in a few sentences: 
+
+The paper discusses the interaction between symbolic and statistics inspired AI, and highlights what the role for symbolic AI is (or could be) for Data Science. The paper starts out with a discussion of what Data Science *is* as a field, then briefly introduces the two approaches within AI, and proposes ways in which knowledge can be seen as the 'data' for statistical approaches, or how statistical approaches can be used to extract knowledge (patterns) from data.
+
+Reasons to accept: 
+
+I think the paper's discussion is highly topical. With the increasing precision of statistical approaches, and availability of larger datasets, we do have a shot at overcoming (or at least alleviating) what is traditionally known as the 'knowledge acquisition bottleneck': how to reliable elicit and acquire expert knowledge. Also, the high quality of symbolic knowledge representation can significantly contribute to the reliability and scope of statistical approaches (that currently have to deal with a 60-80% time investment for making data suitable for analysis). The authors are right at pointing out these benefits, and discuss several cases where these benefits have been shown.
+
+Reasons to reject: 
+
+The 'position' of the paper, though topical, is also not a very surprising one. As the authors themselves already note, there exist several efforts in this direction already.
+
+The paper is overly repetitive and detailed in explaining and introducing symbolic approaches, while statistical approaches are only mentioned by name. Technologies such as RDF, OWL/DL and Knowledge Graphs are introduced in a way that they seem to be very distinct, whereas they are strongly interconnected. I am sure this is merely a matter of presentation, but it makes the paper a rather dense read, and distracts from the message, the position, that the authors want to get across.
+
+The discussion of the "grand challenge" for AI to solve is interesting (discovering the principle of inertia), but not detailed enough to be convincing. What concrete evidence is there that "an addition creative step" (sic) needs to be taken to meet that challenge?
+
+Further comments: 
+
+Overall I think the paper does raise an interesting topic, but the paper suffers a bit from verbosity.

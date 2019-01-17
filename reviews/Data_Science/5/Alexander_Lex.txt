@@ -1,0 +1,31 @@
+Overall Impression: Average
+Suggested Decision: Undecided
+Technical Quality of the paper: Average
+Presentation: Good
+Reviewer`s confidence: High
+Significance: Moderate significance
+Background: Incomplete or inappropriate
+Novelty: Limited novelty
+Data availability: All used and produced data are FAIR and openly available in established data repositories
+Length of the manuscript: The length of this manuscript is about right
+Summary of paper in a few sentences: 
+
+This paper argues the need for visualization when working with omics data.
+
+Reasons to accept: 
+
+Overall, I think it's important to publish a paper like this in Data Science.
+
+Reasons to reject: 
+
+I think this paper could be much improved by teaming up with a biology visualization expert and bringing the recommendations more in line with the current state of the art in visualization.
+
+Further comments: 
+
+While I applaud the general direction, I find the paper lacking in some regards. Some of the arguments seem ad-hoc. For example, the "Dangers when creating visualizations" section discusses one or two challenges one needs to overcome, but clearly isn't comprehensive. I'm unsure why the problem of biases is specific to visualization; rather I believe it to apply to all data analysis methods. Other challenges aren't mentioned.
+
+The author mentions (and implicitly recommends) visualization techniques that, while they are published and used, don't align with commonly agreed-upon best practices in visualization. Examples are 3D node-link visualizations, rose diagrams, star and glyph plots, map and landscape views. These might have been mentioned in outdated literature, such as the referenced "Readings in Information Visualization", which is an excellent book, but has to be taken with a grain of salt nowadays, as the field has matured significantly in the last 18 years.
+
+For the process of building visualizations targeting domain users's needs, I'd recommend to include a reference to and insights from the design study methodology paper [1].
+
+[1] Sedlmair, Michael, Miriah Meyer, and Tamara Munzner. "Design study methodology: Reflections from the trenches and the stacks." IEEE transactions on visualization and computer graphics 18.12 (2012): 2431-2440.

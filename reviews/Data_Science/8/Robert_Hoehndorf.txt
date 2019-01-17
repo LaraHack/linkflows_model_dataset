@@ -1,0 +1,137 @@
+Overall Impression: Weak
+Suggested Decision: Undecided
+Technical Quality of the paper: Weak
+Presentation: Weak
+Reviewer`s confidence: High
+Significance: High significance
+Background: Reasonable
+Novelty: Clear novelty
+Data availability: With exceptions that are admissible according to the data availability guidelines, all used and produced data are FAIR and openly available in established data repositories
+Length of the manuscript: The length of this manuscript is about right
+Summary of paper in a few sentences: 
+
+The manuscript titled "The Knowledge Graph as the Default Data Model
+for Machine Learning" describes a vision for data science in which all
+information is generally represented in the form of knowledge graphs,
+and machine learning algorithms are built that specifically utilize
+information in such knowledge graphs. The authors focus mainly on
+learning from structured information but also highlight the challenges
+of utilizing unstructured information (e.g., string values) contained
+within knowledge graphs for representation/feature learning.
+
+Reasons to accept: 
+
+The manuscript is very timely and fits very well with the scope of the
+journal and current research directions on machine learning with
+knowledge graphs. The authors highlight the state of the art in
+representation learning on knowledge graphs, including recent work on
+applying graph convolution to knowledge graphs, and discuss several
+examples that highlight the challenges that learning from knowledge
+graph can address. I particularly like the discussion of what graph
+convolution can bring to learning with knowledge graphs, i.e.,
+end-to-end learning, something that is not easily achievable with many
+other methods. It would be good to expand on this.
+
+Reasons to reject: 
+
+The manuscript, while addressing an important topic, is not very
+convincing in many points; it also overstates several issues and lacks
+support for many of its claims.
+
+The manuscript does not distinguish between "data" and "knowledge",
+although this distinction is important to make. The authors switch
+between both as if these were the same, and I don't think the authors
+would like to make this claim. Knowledge graphs, as currently used, do
+not contain "raw" data (as the authors seem to claim); instead, they
+contain facts and conceptual knowledge (or background knowledge). The
+authors seem to be aware of this, but conflate both notions
+frequently. Would a knowledge graph, for example, be useful to
+represent image data in "raw" form? While it may, in principle, be
+possible to represent an image in raw form as RDF (for example, by
+representing each pixel as entity and linking to it's RGB value and
+coordinates), it is very unlikely that this would be a useful
+representation (not even mentioning the resource requirements of storing
+image data or other large datasets as RDF). The same holds true for
+many kinds of data, such as videos, audio, genomic sequences, etc.,
+which are not only too large to represent as RDF but also simply not
+suitable for such a representation. This also casts doubts on the
+position taken in the paper (demonstrated in the title) that knowledge
+graphs should be the default data model for (all) machine learning.
+
+Much more likely, there will be machine learning algorithms that take
+the "raw" data (such as images, videos, etc.), extract knowledge from
+those and represent them as facts (in knowledge graphs, or RDF), and
+learning on knowledge graphs can then combine this information with
+background knowledge, other facts, etc. The authors miss the
+opportunity to make this point here. There is also a great potential
+to link machine learning models on "raw" data (images, etc.) to models
+that can learn on knowledge graphs in an end-to-end way, which is something the authors
+seem to be aware of (in the discussion of graph convolution which can
+be directly connected to other models in an end-to-end fashion), but
+fail to mention or discuss.
+
+The authors focus a lot of attention on the fact that knowledge graphs
+can replace feature extraction. This should be stated more precisely;
+identifying which information to include in a knowledge graph can
+still be considered to be a form of feature selection, and it still
+requires data conversion and possibly also some form of "extraction"
+(e.g., discretizing continuous values, or simply representing any
+information as facts). Even in the example they authors give about
+emails, the structure of an email (subject, data, recipients, cc,
+etc.) must first be mapped to a knowledge graph before any knowledge
+graph machine learning methods can be applied. This mapping can be
+seen as a form of feature extraction, and in less structured datasets,
+more work is required to perform this mapping.
+
+The authors also claim that feature extraction removes
+information. While this can be true, the authors neglect the
+possibility that feature extraction can "add" information, notably the
+background information the researcher has but that is not available in
+computational form, or accessible through a knowledge graph.
+
+I don't understand what the authors mean by saying the disjointness or
+subclass axioms are "recursive" properties. In general, the relation
+between a heterogeneous graph (a graph with both edge and node labels)
+and a "knowledge graph" (that may have additional explicit semantics
+and gives rise to inferences) is not clear in the manuscript.
+
+The authors also represent a rather simple version of how the Semantic
+Web can lead to integration; simply reusing IRIs does not on its own
+lead to "integration", due to different data models, different
+semantics, etc. IRIs also do not have to be dereferencable, and it is
+not clear whether dereferencing an IRI (if that is possible) can lead
+to retrieving "data" about the entity (usually we just get a website).
+
+I do not understand how the Open World Assumption resolves the problem
+of incomplete knowledge. Would an algorithm that learns on knowledge
+graphs not also have to solve the problem of missing data, using
+imputation methods? Is this not just "hiding" the imputation problem?
+
+Distance in a knowledge graph does not always reflect similarity;
+imagine a "disjoint with" edge in the knowledge graph, which should
+increase dis-similarity instead of reflecting similarity.
+
+It would be better if Section 5 would present the different approaches
+to learning on knowledge graphs in a more related way. For example,
+embeddings, tensor factorization, or RDF2Vec, are represented as very
+different concepts, but they are quite related (embeddings can, for
+example, be generated through tensor factorization). This relation
+should be discussed instead of just listing these approaches.
+
+Page 10 misses a figure and figure reference ("The GCN model (Figure
+??)...").
+
+The difference between the GCN model and RDF2Vec states that GCN will
+have to maintain the whole graph in memory, while RDF2Vec "need to
+perform random walks on the graph". Please state why this does not
+require keeping the whole graph in memory; why would a random walk not
+require random access to potentially any node in the graph?
+
+The conclusions would be better stated as the conclusions of a
+position, not as conclusions to research results (as it currently reads). I do not believe the
+authors have "shown" the benefits of knowledge graphs in their paper;
+they outline a vision/position in which heterogeneous structured
+knowledge is represented as a knowledge graph and machine learning
+algorithms are built to use knowledge graphs as input.
+
+Further comments:

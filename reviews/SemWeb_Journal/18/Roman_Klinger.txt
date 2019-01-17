@@ -1,0 +1,31 @@
+
+Suggestion: 
+Minor Revision
+Review Comment: 
+The paper “N-ary Relation Extraction for Joint T-Box and A-Box Knowledge Base Augmentation” describes a pipeline for database enrichments. It builds on top of frame semantics.
+
+The introduction comprehensively explains the need and usefulness for knowbase-completion and enumerates different efforts for making knowledge publicly available in a structured manner. It makes very clear what the main contributions of this paper are: It is a whole framework/pipeline from text to database entries. The actual information extraction technology is not very sophisticated, what the authors present as an advantage of the approach (and I agree, if this is of sufficient performance, of course).
+
+The paper explains and partially focuses on technical details. It mentions the use of XML/Wikisyntax and actually explains how these documents are preprocessed. It explains the technology in terms of CPU and RAM used to process the data. I am not fully convinced that this level of detail is helpful in this article. It might be considered to move such detailed description to the homepage where the system can be downloaded and contribute to a more concise description.
+
+The mathematically motivated methods, like TF-IDF-standard deviation-based ranking of entities could be introduced more formally.
+
+The evaluation seems to be sound and is interesting.
+
+This paper could be improved by adding discussions for the different design decisions made when developing the pipeline. For instance, it remains unclear why it has been chosen to use a POS tagger, but no chunking, no dependency parsing. If such steps do not contribute to the overall performance, or if the pipeline would be to slow, that’s fine. But I would prefer to read about these trade-offs and possible impacts of other decisions.
+
+The work is built on top of a manually annotated data set. I am wondering how that would scale to future applications of the pipeline. How is this approach working when new roles or entities are added? Do you expect reannotation to be necessary?
+
+The confidence score calculation is very important when it comes to KB completion, however, section 9.1 is only describing that the pipeline outputs such scores. I more formal description of properties and distributions of these scores would be interesting.
+
+The related work section does not mention distributional methods and matrix factorization-based approaches for relation extraction. A short discussion of advantages and disadvantage would be interesting..
+
+Finally, the developed system shares properties with semantic role labeling systems. How does your development compare to existing systems? Could an SRL-system contribute to a strong baseline?
+
+Minor:
+* T-Box and A-Box are not terms which are well known in all communities which might be interested in this work. These terms should be introduced early in the paper.
+* Figure 1 is very text focused. I understand that this is a screenshot (or print) from an actual system. However, the layout makes it quite difficult to understand just from the depiction what is the purpose. Perhaps a graphical annotation might help here.
+* The use of English is not perfect and could be improved, however, this does not lead to any problems with understanding the content of the paper.
+* Figure 3 could be additionally provided in a translated version, such that non-italien readers could understand it.
+* Captions on Figures (e.g. 8) are too small.
+* Figure 8 is in general hard to interpret, as lines are hard to distinguish.

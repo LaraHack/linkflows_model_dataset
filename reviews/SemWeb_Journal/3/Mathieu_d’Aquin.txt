@@ -1,0 +1,35 @@
+
+Suggestion: 
+Major Revision
+Review Comment: 
+This paper presents a method/tool for analysing issues with online ontologies (said to be Linked Data Schemata) that does not focus on local consistency, but on issues associated with the mixing of such ontologies through owl:import or URI referencing. Such issues include mixing of RDF and OWL (and sometimes DAML), re-definitions that are valid only locally, as well as undefined elements often (according to the authors) resulting from errors (e.g. typos) in the data.
+
+The main claim contributions are the description and tools, as well as the analysis of existing ontologies with respect to the occurrence of such issues, and recommendation on the way to "fix" these issues.
+
+This is a very interesting area with obvious relevance to the theme of the special issue. While debugging of ontologies have received some attention in the past, including from the point of view of avoiding pitfalls and the mixing of different, globally inconsistent models, the approach taken by the authors seem interesting. To summarise my view given in more details below however, I think the paper is not ready for publication, as the description of the method is too vague and the method itself has not been validated. Also, I do think that the presented use case (the open annotation ontology) is not sufficient either to demonstrate the value/validity of the method, or as an analysis of the current issues.
+
+= Originality =
+
+There is a large amount of literature on ontology debugging that seems to have been overlooked a bit. The related work section indeed talks about a number of works that are directly related to the current one, but a bit more of an overview of ontology debugging would give the reader a better idea of the way the proposed method places itself in the context of the state of the art. Also, there is a lot of discussion on the fact that the issue comes from unifying models. I'm surprised not to see more references to approaches (especially related to ontology alignments, distributed description logics or E-Connections) that have been taking a completely different approach to the issue of dependencies between inter-connected but possibly incompatible ontologies.
+
+= Significance of the results =
+
+The paper is made harder to assess by the fact that there are really 3 claimed contributions each with specific issues.
+
+Regarding the method and tool, the overall description of what is being done can be followed from the point of view of the narrative, and the fact that the tool and sources are available certainly helps. Nevertheless, the description remains vague, and many of the terms employed are not defined. For this kind of work, I would have expected more formalisation of at least the basic notions being manipulated (e.g. what is an "Orphan Class"?). It is often the case in this sort of work that the biggest problems come from tiny details and there isn't much in the paper that helps the reader understand how things work.
+
+The other issue on the methods is that it is not really evaluated. It is ran on an example which at least demonstrates that it can find issues, but there is no indication of how significant/real these issues are, whether it is complete, how well it performs, etc.
+
+Regarding the analysis, if taken as a contribution in itself, it is much too weak. Despite the fact that it includes more than 60 ontologies, it remains that this is analysing (only partially) the dependency tree of only one ontology (which we have not reason to think is representative). I can't quite see what we can learn from this other than that the method works on this example (and even that is not clear; see above), and that this dependency tree shows a number of issues. I actually don't understand why the authors limited their study to this one example: if the tool and method work, why not doing it on all the ontologies/vocabularies of LOV then? Without something of this scale, many of the claims that are made in the paper about the current practices in ontology/schema building/publication are baseless and should not be included.
+
+Finally, there are the recommendations. I am not quite sure what to say about this, in the sense that these should certainly not be evaluated for their scientific value (being based, as discussed above, mostly on anecdotal evidence, and rather representing, I think, the authors' opinion). These things can however be very useful if they propose solutions that can be implemented and that would lead to a clear improvement. While several of these recommendations are clear and sensible, others are just not realistic. For example "Ontologies in OWL need to immediately stop" using rdf:List - How do you suggest this can happen? Also, in the last one, the solution is "collaboration between ontology designers" - again, how would that be achieved? Is it even desirable that ontology designers will have to be coordinated? Isn't that against the whole semantic *web* idea?
+
+In other words, while I welcome the recommendation section as a way to support better quality ontologies, that play well with others, the effectiveness of these recommendations is hampered by the fact that, for several of them, there is no concrete way to implement it.
+
+= Quality of writing =
+
+The paper is easy to read and follow. The narrative also seems to be flowing reasonably well. The main issues however, other than the paper not being in the right format (i.e. not applying the journal's template) are already mentioned above:
+- The technical description of the method/tool is too vague
+- Many claims are made, especially about the current ontology engineering practices, that are not substantiated (in the conclusion "The results of our survey give valuable information about the state of ontology development" - I don't think this can be said of a survey consisting in the debugging of the (partial) dependency tree of one ontology).
+
+Also, this might just be me, but the abstract confused me a bit as I, for a minute, thought the authors were suggesting merging all online ontologies into 1 common, universal model.

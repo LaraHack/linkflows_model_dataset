@@ -1,0 +1,45 @@
+
+Suggestion: 
+Major Revision
+Review Comment: 
+This paper is introduced as a new benchmark for relational-to-ontology mapping generation. However it is more an extension of a previous paper on the same subject [1].
+
+However, given that the paper is an extension of prior work, claiming that this paper proposes a benchmark [abstract and p.2] is kind of inaccurate and this is only clarified at page 3.
+I would suggest that it becomes clear from the very beginning that this is an extension of an existing and already presented benchmark and the contributions compared to the prior paper are clearly introduced and supported.
+
+More, the benchmark is positioned in respect to relational-to-ontology mapping generation quality. However, quality is perceived and often cited as fitness for use. In this respect, what is perceived as quality in the case of this paper/benchmark? What is the exact use that is discussed? Which quality dimension is covered in respect to Linked Data?
+I would suggest that this is clarified. To do so, I would advise to consult [2].
+
+In the same context, in the abstract it is mentioned that "this approach crucially relies on high-quality mappings". What does it mean high quality mappings? When does this occur? When a mapping is of high quality? I would suggest that it is supported with arguments or with a certain citation that defines high-quality mappings, else skip. From my point of you, I would expect that this approach aims to define targets that enable high-quality mappings generation (with quality clarified), rather than it relies on high-quality mappings.
+
+Similarly, on page 2, it is mentioned that “Ontology-based data integration crucially depends on the quality of ontologies and mappings” and “Many of these ontologies are of good quality”. Is there any evidence? I would again ask to bring valid arguments or citations that support the statements and consider determining the notion of ontology quality. But more important, how do these arguments help in supporting the paper? If the argument can not be proven or supported by a citation and it is not crucial for the remaining of the paper (which is the case in my opinion) I would suggest the comment to be removed.
+
+My two major remarks regarding the overall paper are related to (i) the high level presentation of the benchmark and (ii) the delta between the already published benchmark and this paper’s contribution. To be more precise in reverse order:
+
+To start with, the first contribution of the paper (as outlined in section 3.1) is the systematic analyses of challenges in relational-to-ontology mapping generation. However, the now-called “integration challenges” as outlined, offer no additional information compared to the so-called “mapping challenges” outlined in the previous paper that initially introduces the benchmark. To be more accurate, the entire section 2 (apart from three sentences in the structural heterogeneity) is an exact copy-paste of the previous paper.
+I would suggest that this section is briefly summarized and the previous paper is cited for more details. The emphasis should be put on the aspects of the challenges which actually form the contribution of this paper.
+Although, it would be interesting to be clarified why they turned to be called “integration challenges” instead of “mapping challenges” as they were originally introduced. From my point of view, both are applicable but in different cases, namely a mapping is not limited to integration cases but integration is a certain type of mapping. But I would suggest that the authors clarify what they had in mind.
+
+The third contribution of the paper (as outlined in section 1.3) is claimed to be the RODI benchmark. However, the RODI benchmark was proposed in the previous paper [2] as explained above. The extension is the contribution in this paper which is accomplished thanks to the new evaluation scenarios (second contribution in section 1.3) and the extended system evaluation (fourth contribution in section 1.3). The RODI benchmark, among others, was extended to cover also semi-automatic mapping generation. I would suggest that this (and all other concrete differentiation) is explicitly mentioned and emphasis should be put on how these were achieved.
+
+Focusing on the second contribution of section 1.3, the major contribution of this paper is the extension of the evaluation scenarios. It is mentioned that 9 new evaluation scenarios are introduced but it is not clear what these new evaluation scenarios offer in comparison to the existing ones. To be more precise, the 9 new evaluation scenario fall in which category of challenges? I would expect new challenges or particular details of the outlined challenges to be associated with these 9 new scenarios.
+And this leads to my first remark, namely the high level presentation of the benchmark. It never becomes clear which the evaluation scenarios are, which the exact test cases are and which aspect of each challenge category each one of them addresses.
+On page 11, it is mentioned that query pairs are tagged with categories, but which categories? It only becomes clear later on which these categories are (class instances, datatype/object properties, if I am not mistaken). But additional categories are mentioned too. How all these categories are aligned with the mapping/integration challenges? I would suggest that these query pairs/test cases/challenges alignments are summarized in an additional table (or at least clusters of them) so an overall idea of the benchmark becomes clear. It is also not clear how many scenarios, query pairs, test cases are defined. Additionally, I would suggest to clearly indicate which scenarios already existed and which were introduced.
+
+More, in the paper it is mentioned that ”queries are highly complex compared to the ones in other scenarios and require a significant number of schema elements to be correctly mapped at the same time to bear any results.” I would suggest that it is clarified why this is important and what additional additional information offers? I assume that if the simple cases fail, then the more complex one would also fail. Then why such complex cases are necessary? Are there any cases identified that simple cases properly generate the triples but in the complex case they fail? If so, I would suggest that this is elaborated, including examples. This way it becomes clearer how incrementally complicated test cases are added to the different domains and what they serve.
+
+In the same context, the descriptions of the different domains provide fragmented information. For instance, it is mention that the database size in the case of the oil and gas domain is approximately 40MB. But what is the size in the case of the other domains? The same occurs in the case of ontologies (classes and properties). I would suggest that the same information is provided for all different domains.
+
+Minors:
+There is some overall problem with the citations enumeration (from [7] on I think)
+
+[p.11] Query pairs are manually curated → What do you mean as manually?
+
+[p. 11] “We have collected 17 queries in scenario npd_user_tests” → Where does this come from? If the scenarios are outlined, I would suggest to point to the corresponding one. Else, I would suggest that this is not mentioned.
+
+[p.12] Table 4 looks more like a figure.
+
+Table 1 and Table 2 differ only by 1 column, I would suggest that the two tables are merged.
+
+[1] Christoph Pinkel, Carsten Binnig, Ernesto Jiménez-Ruiz, Wolfgang May, Dominique Ritze, Martin G Skjæveland, Alessandro Solimando, Evgeny Kharlamov. RODI: A Benchmark for Automatic Mapping Generation in Relational-to-Ontology Data Integration. Published in Proceeding of the 12th Extended Semantic Web Conference, 2015.
+[2] Quality Assessment for Linked Data: A survey. http://www.semantic-web-journal.net/content/quality-assessment-linked-da...

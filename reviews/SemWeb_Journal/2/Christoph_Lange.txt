@@ -1,0 +1,44 @@
+
+Suggestion: 
+Minor Revision
+Review Comment: 
+This paper presents a comprehensive framework for benchmarking tools that map from relational database schemas to OWL ontologies. The paper extends earlier works by the same author to a sufficient extent to justify a new publication. The paper …
+
+* motivates relational-to-ontology mapping and the need for benchmarking mapping tools reasonably well,
+* provides a well-structured, detailed discussion of the challenges that such mappings face,
+* reviews existing mapping approaches on an abstract level while pointing out concrete traits of concrete tools where appropriate,
+* presents the RODI benchmark suite: its data (multiple complementary relational database schemas and target ontologies from various application domains) and its implementation,
+* presents the results of applying the benchmark to state-of-the-art mapping tools and discusses their performance in depth,
+* pointing out tool-specific improvements but also further directions for relational-to-ontology mapping approaches in general.
+
+It thus gives a complete account of a research effort in its field, and it is well structured and generally maintains a high quality. I recommend acceptance with minor revisions.
+
+The most frequent shortcomings include figure readability issues and lack of elaboration of certain specific points, which makes them hard to understand – but these elaborations should be straightforward to add.
+
+Also, the scope of this paper could be defined more clearly. In the paper, the difference that you draw between databases and ontologies sometimes appears stricter than it actually is in practice. E.g., in Section 2.1 "Naming Conflicts" I believe that some of the challenges you claim to be unique to the relational-to-ontology context (singular vs. plural names, different tokenization) do actually also exist in other contexts such as ontology alignment. Also, Section 2.3 "Semantic Heterogeneity" says that databases don't do logical inference, but often they do, e.g., by way of views or triggers. If you don't consider such databases here, it would help to say so explicitly. Similarly, like database schemas, ontologies may also be optimised for performance and not strictly give preference to faithfully modelling the domain (as you state in Section 2.2.1 "Type Conflicts"). With regard to mapping use cases, I think there are, in addition to the scenarios introduced in Section 3.1 "Differences in Availability and Relevance of Input", also the scenario where you first have an ontology (= conceptual domain model) and then a database schema evolves (being an efficient implementation of a data store), and the scenario of ontology/schema co-evolution.
+
+Even though some of this work has been presented earlier, I would recommend making this current paper more self-contained. E.g., it would make sense to re-state the formal definition of structural result equivalence in Section 4.7 "Evaluation Criteria – Scoring Function". There is no doubt that your current submission adds a lot of content over your older papers.
+
+Some detailed comments (more in the PDF linked below):
+
+_______________________________
+
+* 2.1 "Naming Conflicts":
+* I'm not sure it's sufficient to identify matches by _name_ of, say, database column vs. ontology property. I could imagine many practical settings where these names are completely different.
+
+_______________________________
+
+* 2.2.3 "Dependency Conflicts":
+* Figure 2: Rather than numbering the different options I'd distinguish them by _name_.
+_______________________________
+
+* Table 1: It is not clear to me how something as unspecific as an instance of owl:Class can provide _guidance_ to a mapping creator.
+_______________________________
+
+* 4.1 "Overview":
+* Table 2 largely reproduces Table 1 and thus wastes space.
+_______________________________
+
+At http://www.iai.uni-bonn.de/~langec/exchange/swj1257.pdf please find an annotated PDF with detailed comments.
+
+

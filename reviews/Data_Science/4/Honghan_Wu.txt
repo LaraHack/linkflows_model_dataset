@@ -1,0 +1,42 @@
+Overall Impression: Good
+Suggested Decision: Accept
+Technical Quality of the paper: Good
+Presentation: Excellent
+Reviewer`s confidence: Medium
+Significance: High significance
+Background: Reasonable
+Novelty: Clear novelty
+Data availability: All used and produced data are FAIR and openly available in established data repositories
+Length of the manuscript: The length of this manuscript is about right
+Summary of paper in a few sentences: 
+
+This position paper presents an overview about the data science as a discipline with a focus on discussing the differences and associations of the two main methodologies in Artificial Intelligence - knowledge representation (symbolic representations and their computations) and statistical approaches (e.g., neural networks, deep learning and etc.). Specifically, the authors discussed 1) how explicitly presented knowledge can help data science / statistical methods? 2) how statistical approaches can help identify patterns / regularities from data, which can further be distilled as domain knowledge? 3) the future (grand) challenges in data science - challenges that might require the invention of disruptive methodologies that are able to abstract the unobservable, but fundamental laws of the world like Galileo’s principle of inertia.
+
+Reasons to accept: 
+
+I think this is a very timely discussion on how the two different methodologies (symbolic and statistical AIs) can and should converge to go a step further towards human-like intelligence. More generally, the community definitely needs this kind of high-level thinking about what data science can do, why it has been successful in certain domains and what are fundamentally missing. The authors gave a clear overview on the current developments in both symbolic and statistical AIs, and presented a good review on the efforts so far of integrating the two. The grand challenge raised in the last section is a valuable opinion that will stimulate discussions and lines of thought about what are the most exciting directions of data science in the community.
+
+Reasons to reject: 
+
+I found it is a bit unfortunate that the authors totally missed the consideration of human factors (such as human guided intelligence or human-machine interactions [1]) in this discussion. From the data science's point of view, it is very important to understand what humans are good at (putting in the era of big data) and how such human-factors can be utilised in or used to guide AI algorithms, such as [2]. From the societal point of view, with the increasing concerns from the public about Ai taking over our jobs, this topic also seems unavoidable. Just as Stephen Hawking pointed out "AI will be 'either best or worst thing' for humanity".
+
+Following this direction, I think it is also worth touching the topic of cognitive computing [3], which was proposed as a interdiscipline between computing science, neuroscience and nanotechnology and is now more about technologies to mimic the functioning of the human brain.
+
+[1] Sacha, Dominik and Sedlmair, Michael and Zhang, Leishi and Lee, John A. and Peltonen, Jaakko and Weiskopf, Daniel and North, Stephen C. and Keim, Daniel A. (2017) What you see is what you can change: human-centred machine learning by interactive visualization. Neurocomputing . ISSN 0925-2312
+[2] Ofli, Ferda, et al. "Combining human computing and machine learning to make sense of big (aerial) data for disaster response." Big data 4.1 (2016): 47-59.
+[3] Modha, Dharmendra S., et al. "Cognitive computing." Communications of the ACM 54.8 (2011): 62-71.
+
+Further comments: 
+
+In addition to the related work introduced in the paper, there is another line of work of integrating reasoning with machine learning at the workflow level that is "an algebraic operation in a space of (machine learning) models"[4]. Furthermore, the paper mentioned "knowledge graph" in various sections without a definition. It would be helpful to provide a brief introduction or references, such as [5].
+
+[4] Bottou, Léon. "From machine learning to machine reasoning." Machine learning 94.2 (2014): 133-149.
+[5] Pan, Jeff Z., et al., eds. Exploiting Linked Data and Knowledge Graphs in Large Organisations. Springer, 2017.
+
+Some minor suggestions:
+- p2: "(meta)data description, interpretation, archival, publishing," -> (meta)data description, interpretation, archiving, publishing,
+- p2: bank transaction -> bank transactions
+- p2: "and turning it into knowledge" -> and turn it into knowledge
+- p4: figure 1 puts AI in science. I think AI is similar to data science which is a kind of interdiscipline. If it has to be put in the figure, it seems better to be in the technology bit.
+- p4: knowledge as data section - it might be worth mentioning the line of work that uses ontologies in natural language processing.
+- p5: "owl-structured ontologies" - OWL is a language rather than a data structure. I would say owl-specified or owl-described.

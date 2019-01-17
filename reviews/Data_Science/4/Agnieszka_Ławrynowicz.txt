@@ -1,0 +1,72 @@
+Overall Impression: Average
+Suggested Decision: Undecided
+Technical Quality of the paper: Average
+Presentation: Weak
+Reviewer`s confidence: High
+Significance: High significance
+Background: Reasonable
+Novelty: Unable to judge
+Data availability: All used and produced data are FAIR and openly available in established data repositories
+Length of the manuscript: The length of this manuscript is about right
+Summary of paper in a few sentences: 
+
+The paper tackles important issues, and I support such a position paper.
+The general concepts and structure of the paper are good.
+However, the paper is written often uncarefully, with typos, unclear symbols, unclear focus of specific paragraphs.
+Especially, such things as typos should not occur in a journal submission.
+The paper seems to be written in a hurry.
+
+Below I list the detailed comments:
+
+Page 1: world in which we „are living” or in which „we live”?
+
+Page 2, second paragraph: the topic of this paragraph is unclear. Is this mostly about scientific experiments, or about data life cycle? Please choose one main topic per paragraph.
+It also reads sketchy at some parts. It would be better to provide a complete list of steps of a *typical* data life cycle instead of giving only examples (maybe the sentence could be rewritten to avoid „mainly consists” and „among others”).
+What is „archival”?
+
+Page 3: something wrong with this sentence:
+„In a physical symbol systems [35], physical entities (tokens, symbols) stand for, or denote, entities, are combined with other symbols to form complex symbol structures, and are manipulated by processes”
+
+Page 4:
+Fig.1: It is unclear to what refer the processes of „creating”, „processing” etc. To „data” coming from social, technology and science disciplines?
+Can A.I. be classified under both „science” and „technology”? Why e.g. „Computing” is not under „Science” and „Meteorology” under „technology”. Why „Energy” is under Social? What is exactly meant by „energy”? There is a typo in the word „philosophy”.
+Overall, the figure makes an impression of a bit too arbitrary. It could probably be more tidied up.
+
+The definition of „ontology” is given two times, once in Section 2 (Page 4) and then again (very similar definition) in Section 3. Should I suspect that specific paragraphs were written by different authors but without consolidating and proof-reading the final result?
+
+Last paragraph of Page 4: tenses are mixed (once there is „have been developed” and the other times „were developed”).
+The citied references dealing with knowledge graphs seem to be picked a bit ad-hoc. Could there be more structure in referencing them?
+
+Page 5:
+Fig. 2: What kind of a relation/process is meant by two big black arrows? Maybe this can be explained in the caption.
+„if”->”whether”?
+
+I do not agree that only some OWL axioms may give rise to a graph structure. In principle, all OWL axioms can be serialized as RDF, i.e. as labelled graphs.
+
+Fourth sentence from the end: the symbol of logical „models” or „entails” is corrupted.
+
+Section 2 would benefit from more structured discussion on what are the particular problems of treating knowledge as data. The current one is a bit too sketchy.
+
+Page 7:
+What is „almost infinite”? Is it finite or not or just huge?
+
+References:
+Reference [1] lacks the name of the author.
+There are missing letters in the names of some authors, e.g. [9, 20]. Some authors are referenced using their first name and some not.
+
+Some typos:
+-grpah
+-Page 7: an addition -> in addition?
+
+Reasons to accept: 
+
+Important and nicely, centrally placed topic for as a position paper to bootstrap a data science journal.
+
+Reasons to reject: 
+
+Uncarefull writing, with typos, unclear notations and sometimes sketchy structure.
+
+Further comments: 
+
+Overall, I think that the paper, as a position paper, tackles important and timely topics, and I would be happy to see this kind of a paper published.
+It needs though careful proof-reading and polishing.

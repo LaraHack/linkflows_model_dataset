@@ -1,0 +1,33 @@
+Overall Impression: Good
+Suggested Decision: Accept
+Technical Quality of the paper: Good
+Presentation: Excellent
+Reviewer`s confidence: Medium
+Significance: High significance
+Background: Comprehensive
+Novelty: Limited novelty
+Data availability: All used and produced data are FAIR and openly available in established data repositories
+Length of the manuscript: The length of this manuscript is about right
+Summary of paper in a few sentences: 
+
+This paper presents a case for fostering diversity with respect to paradigms, methods and tools in the upcomimg field of Data Science.
+
+Reasons to accept: 
+
+The authors clearly identify the paradoxical fact that even though Data Science is a young research field, there are already signs of preferences with respect to specific paradigms (Deep Learning comes to mind). The authors make the point for maintaining diversity in the field and here point to its benefits identified in different domains.
+This is of course true for any scientific domain, but even moreso for Data Science as here, the most succesful methods are often ensemble methods, that only work because of the different biases and of the individual algorithms. I think this point is quite interesting and the authors make a good point that both the tools themselves as the scientific structures from which they result should be diverse enough. The authors' main point is therefore that diversity results in the best quality models. I would also add that for 'good science', diversity is even more important than for 'good results'. As scientists, we should not primarily be motivated by performance of methods, but by knowledge gained with respect to the workings of these methods and models. For this, a good diverse landscape of such models is needed.
+
+I also appreciate how this is related to features of scientific (collaboration) networks in section 2.2
+
+In Section 2.3. the authors discuss the role of incentives to foster this diversity. The directions the authors point to are interesting, but more concrete measures would have been appreciated. This notwithstanding, the paper is a very nice read and a good call to remain vigilant as a community, I would like to see this argument made in the first issue of this journal and therefore suggest accepting the article.
+
+Some minor issues:
+- The first sentence of 2.1: "Analyzing the networks of scientific can " -> word missing here
+- Section 2.1: "For example, the Web of Science" - please add a reference to this platform (in a footnote)
+- 2.1 " resolutions.However" Missing whitespace
+
+Reasons to reject: 
+
+none
+
+Further comments: 

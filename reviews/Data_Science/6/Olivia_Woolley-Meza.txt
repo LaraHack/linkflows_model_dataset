@@ -1,0 +1,35 @@
+Overall Impression: Good
+Suggested Decision: Accept
+Technical Quality of the paper: Good
+Presentation: Excellent
+Reviewer`s confidence: Medium
+Significance: High significance
+Background: Reasonable
+Novelty: Limited novelty
+Data availability: All used and produced data are FAIR and openly available in established data repositories
+Length of the manuscript: The length of this manuscript is about right
+Summary of paper in a few sentences: 
+
+The author argues for the importance of multi-, trans- and interdisciplinary work where the data scientist is well integrated in a team with the necessary domain specific knowledge. The specific case she discusses is data-science in biomedical research. The main points she makes are, first, that domain specific knowledge helps the data scientist select relevant models and produce interpretable and usable results. Second, that new technical gaps can be exposed through applied data-science work especially when the non-data scientists in the team push the data scientist to detect shortcomings in the existing approaches. This leads to advancements in "pure" data-science research. Further, the author suggests some of the institution level frameworks necessary to sustain and encourage this activity. Namely, the appropriate metrics need to be designed to evaluate data science work that is primarily team and application driven, and career tracks opened up for researchers that work principally in this environment.
+
+Reasons to accept: 
+
+I think this is an important and urgent topic, with general applicability to the work of data-scientists. The commentary is well-written and an interesting read.
+
+Reasons to reject: 
+
+However, I think that in some places the general thread of the argument is lost, and some critical points are touched upon superficially. I make some suggestions below. Once these points are addressed this will be a piece well-worth publishing.
+
+Further comments: 
+
+I would recommend that the title make specific reference to Biomedical work since this is the only domain that is explicitly discussed. I would also suggest that in the conclusion the author points to other specific subject domains where well-integrated team data-science is important and should be fostered by academic institutions.
+
+The author uses the idea of relevance of a model as a central argument for why integrating a data-scientist in the team is good. Another point is the appropriate clinical interpretation. Specifically: "Without the context provided by the HIV experts, the data scientists would have developed a less relevant model, and possibly provided misleading findings. Thus, integration of the data scientist into the team environment enabled the data scientists to arrive at an approach that yielded clinically appropriate interpretation. The iterative team-based process also more generally ensures that products from the collaboration will be relevant. "
+These are very important points, but also controversial. It is easy to make the opposite argument that the involvement in the team leads to "group-think", and narrowed/biased model selection according to conventional understanding, ruling out better and more innovative approaches. The author should address how to avoid/minimize this problem or why it is not an issue in the setting she is discussing.
+
+In the example of exposing gaps in existing methods, the author does not provide a reference for the missing data imputation method developed. Either a reference is required and/or an explanation of how the method developed is different from the standard, and how the input of domain experts made this so.
+
+It is unclear to me where the line is drawn between an external "consultant" data scientist and one who is really part of the team. I think spelling this out more clearly early on in the argument would make it clearer.
+
+Finally, in regards for how to evaluate contribution to team work, and the overall performance of a researcher who primarily engages in this work, the author says :"The authors developed an excellent and systematic approach for how evaluation and promotion could better recognize the intellectual leadership of the team scientist.[8] They further described how to evaluate contributions to publications, grants, and research programs, in order to summarize overall scholarship in a way that appropriately weights contributions to team-based science."
+What is the main idea behind this systematic approach? The innovation? A short explanation of the specific method suggested is really left wanting.

@@ -1,0 +1,7 @@
+
+Suggestion: 
+Accept
+Review Comment: 
+This manuscript was submitted as 'Survey Article' and should be reviewed along the following dimensions: (1) Suitability as introductory text, targeted at researchers, PhD students, or practitioners, to get started on the covered topic. (2) How comprehensive and how balanced is the presentation and coverage. (3) Readability and clarity of the presentation. (4) Importance of the covered material to the broader Semantic Web community.
+
+The paper is well written and presents an extensive survey of dirrefent distance measures for point sets. As point set distances are very relevant to find connections in all kinds of data, the topic is relevant for the Semantic Web community.

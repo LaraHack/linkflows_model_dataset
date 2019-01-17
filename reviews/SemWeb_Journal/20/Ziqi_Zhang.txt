@@ -1,0 +1,22 @@
+Suggestion: 
+Major Revision
+Review Comment: 
+The paper introduces a named entity disambiguation/linking method based on random walks. NED/NEL is a very relevant task to the Semantic Web community and certainly a very challenging one. Despite a plethora of studies carried out in the recent years, there remains some issues to be addressed. For example, as the authors pointed out, previous benchmark datasets could be biased to 'easy' tasks, hence it is extremely valuable that the authors developed a new dataset in a controlled way and used it to evaluate a wide range of state-of-the-art methods.
+
+Clearly this is an extension of the author's previous work in [10]. However, to publish as a journal article it is normally expected that a substantial part of the article must be new. Unfortunately at its current state, I cannot see this requirement being satisfied. Specifically, I'd like to point out that, the introduction, the related work, and the conclusion section of this article has re-used those from the original work [6] with very few changes. It is easy to see the same structure of content being used, and in many places, almost verbatim repetition. Hence I am seriously concerned that this could cause copyright issues if accepted as-is, and I strongly urge the authors to double check with the publisher of [10] and SWJ.
+
+In any case, it is totally understandable that an extended work may want to re-use many of the content previously published. However, I would expect reasonable effort to be made to re-structure, and re-word the content. For example, you should consider using different examples for illustration (introduce); you should consider moving the discussion of limitations of existing work at such a detailed level in section 1.1 into related work, instead of just changing section title as you have done so far; you should do more detailed related work discussion, using e.g., tables/figures to compare and contrast. It is crucial that you must reduce the level of verbatim (or nearly) copying. This is the first issue.
+
+Second, it is not clear to me what do you mean 'revised and simplified our optimization goal'. It seems to me that this is merely changing equations 3 and 4 from a linear model (sum) to a non-linear (multiplication). But there is no discussion on why and how this benefits your method. If this is one of the major changes in the newer work, you should give it a larger weight in the paper. Also, as a general rule, whenever you introduce changes to previous method, you should always always explain clearly the changes in the paper.
+
+Third and in relation to the second, I think you should rebalance the weight given to different parts of the methodology section, or enrich it. In almost 5 pages of methodology nearly 4 pages are the same as [10]. You should focus more on the new changes (i.e., the two points you mentioned in the summary of changes)
+
+Fourth, many parts of the paper need further clarification. See below:
+- I notice difference of notations being used in the equations from [10] and this paper. However, in almost all cases, the equations are essentially identical. If so, what is the motivation to change them? Isn't it clearer and easier for readers to follow if you use consistently the same notations?
+- The graph construction process is not as clear as it was described in [10]
+- non candidate entities are pruned if they have a degree below 200: if this means the entity must be linked with at least 200 other entities then this sounds surprisingly high. Can you give readers some context, what is the average, max, min of the degree of these non candidate entities?
+- In table 1, which of the WNED, L2R-CoNLL, L2R-SELF is the same as the system proposed in [10]? I suppose the answer is none, because you changed the equations 3 and 4, and hence the slightly different results from [10]. However this is not explicitly described at all.
+- When you say you use a more recent and cleaner Wikipedia you should say exactly what version and provide a link
+- it is not clear enough how the new benchmark datasets are created. How do you sample from ClueWeb and Wikipedia? What is the FACCI annotated ClueWeb dataset, is there a link?
+
+Finally, it would make a lot of sense if the authors make a remark on how your method can be generalised to other KBs. The method currently is very tailored to Wikipedia. Will it work for, e.g., DBpedia and Linked Data in general, and if so how?

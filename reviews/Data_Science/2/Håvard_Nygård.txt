@@ -1,0 +1,23 @@
+Overall Impression: Good
+Suggested Decision: Accept
+Technical Quality of the paper: Excellent
+Presentation: Excellent
+Reviewer`s confidence: High
+Significance: High significance
+Background: Comprehensive
+Novelty: Limited novelty
+Data availability: All used and produced data are FAIR and openly available in established data repositories
+Length of the manuscript: This manuscript is too long for what it presents and should therefore be considerably shortened (below the general length limit)
+Summary of paper in a few sentences: 
+
+The discusses the use of prediction in conflict research. It discusses the recent shift from a singular focus on explanation to more use of prediction, reviews current efforts and methods for predicting conflict, and discusses challenges to predicting armed conflict.
+
+Reasons to accept: 
+
+This is an excellent and extremely timely paper. Conflict forecasting today is one of the most innovative sub-fields of conflict research. This article provides a very useful overview of the field and, more importantly, provides an original discussion of the limits and challenges to conflict prediction. In this, the paper clearly is highly relevant not just for conflict research but also for the wider data science community. The particular challenges to prediction the author points to will most definitely be fruitful avenues for future research on conflict prediction.
+
+Reasons to reject: 
+
+NA
+
+Further comments: 

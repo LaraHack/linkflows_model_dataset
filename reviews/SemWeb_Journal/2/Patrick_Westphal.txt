@@ -1,0 +1,259 @@
+
+Suggestion: 
+Major Revision
+Review Comment: 
+In the paper 'RODI: Benchmarking Relational-to-Ontology Mapping Generation Quality' the authors present RODI, a framework for benchmarking relational data-to-ontology mappers. This framework is equipped with several evaluation scenarios covering three application domains. These are used to evaluate the generated relational-to-ontology mappings of six mapping systems.
+
+After motivating and introducing their approach the authors discuss the main challenges of mapping relational data to ontologies. Afterwards aspects are shown in which mapping systems differ and what kind of challenges this poses to a benchmarking tool. In the following section the RODI suite is introduced along with its evaluation scenarios covering different domains and the actual approach to score generated mappings. After describing some details about the framework the evaluation is presented and results are discussed. The authors close with related work and conclusions.
+
+I think the approach is relevant since it provides means and a measure to detect deficiencies in relational-to-ontology mapping systems. The authors could also prove this in an evaluation on real tools. Moreover the findings could be used to improve the tools under assessment.
+On the other hand, even though the source code of assessment frame work is provided, it is not trivial to re-run the evaluation since there are no build mechanisms for the framework and required libraries are not provided (and in the worst case not downloadable at all, but would have to be built from other projects in turn).
+
+The ideas presented seem to be valid as far as I can tell. (I'm not familiar with the tools and don't have much practical experience in ontology-based data integration.) However, some things I would have been interested in were not discussed. Since the authors use the mean of many different queries to represent an overall quality score (e.g. Tbl. 5) it would have been interesting to get an idea about the distribution of the queries' main assessment targets. E.g. when 99 of 100 queries target a certain normalization issue a tool failing on that would perform really bad. So, in other words: Are certain integration challenges overrepresented in the scenarios.
+I think the same holds for the distribution of the actual data. Having a table used to test denormalization issues which is far smaller compared to other tables, one wrong entry in this table would have a far bigger impact on the score than in other tables. So like missing one in three the accuracy drops by one third; missing one in 1000 the accuracy doesn't change considerably.
+
+In my opinion the related work covered is sufficient. The only paper that came to my mind which was not mentioned but suits the topic might be "Measuring the Quality of Relational-to-RDF Mappings" from Tarasowa, Lange & Auer.
+Besides this, for me the phrasing "Their proposals do not include a comparable scoring measure" referring to bib entry [54] was not really clear. The trial in [54] was to provide a formal framework and define metrics formally. I mean, of course you cannot compare the score of a completeness metric with a metric covering e.g. syntactic validity but each metric should be comparable amongst different mappings.
+
+I think the main issue of this paper is its originality. Text-wise (counted in quarter columns) the sentences either directly copied from the previous paper or re-phrased but still having the same content make a bit less then half of the paper. But I think content-wise the authors are pretty close to the required minimum of 30% improvement. (Even though this is hard to measure, of course.) For me the improvement here comprises Sec. 3 'Analysis of Mapping Approaches' (which I think could be compressed a lot), more detailed descriptions of the scenarios, framework implementation details, and re-running the evaluation scenario on additional tools with newly introduced semi-automatic scenarios. IMHO only Sec. 3 and ability to run semi-automatic scenarios account for improvements with respect to the call and submission type.
+
+The paper is mostly well written but quite some newly introduced paragraphs hamper the reading flow. One particular example would be the introduction of the concepts of 1:n/n:1 matches which need further explanation IMHO. Moreover the trials to rephrase every sentence in the first sections makes it a bit hard to read. Another severe issue is that some literature references seem to be broken.
+
+Due to my concerns stated above I don't think this paper is publishable as is. Besides the question whether it meets the requirements of 30% improvement at all, I would like some of the newly introduced parts to be improved to better fit in the whole paper.
+
+Minor comments and concrete issues in chronological order:
+
+1. Introduction
+
+1.1. Motivation
+
+> Mapping development has, however, received much
+> less attention. Moreover, existing mappings are typi-
+> cally tailored to relate generic ontologies to specific
+> database schemata.
+
+This sounds a bit like a over-generalized claim. (Though I can't prove it's actually wrong since I don't have much experience in ontology-based data integration.)
+
+> This is a complex and time consum-
+> ing process that calls for automatic or semi-automatic
+> support, i.e., systems that (semi-) automatically con-
+> struct mappings of good quality, and in order to ad-
+> dress this challenge, a number of systems that gener-
+> ate relational-to-ontology mappings have recently been
+> developed [8,40,14,53,3,46,28].
+
+> The quality of such generated relational-to-ontology
+> mappings is usually evaluated using self-designed and
+> therefore potentially biased benchmarks, which makes
+> it difficult to compare results across systems, and does
+> not provide enough evidence to select an adequate map-
+> ping generation system in ontology-based data integra-
+> tion projects.
+
+Hard to understand. Maybe this could be split into multiple sentences.
+
+> Thus, in order to ensure that
+> ontology-based data integration can find its way into
+> mainstream practice, there is a need for a generic and
+> effective benchmark that can be used for the reliable
+> evaluation of the quality of computed mappings w.r.t.
+> their utility under actual query workloads.
+
+For me this reads like ontology-based data integration would never become relevant in practice unless there is an effective benchmark which I think is a bit exaggerated.
+
+1.3. Contributions
+
+> - The RODI framework: the RODI software pack-
+> age, including all scenarios, has been implemented
+> and made available for public download under an
+> open source license.
+
+I would not count this as a contribution of a scientific paper.
+
+2. Integration challenges
+
+2.2.1. Type Conflicts
+
+> With this variant, map-
+> ping systems have to resolve n:1 matches, i.e.,
+> they need to filter from one single table to extract
+> information about different classes.
+
+> In this variant, mapping systems
+> need to resolve 1:n matches, i.e., build a union of
+> information from several tables to retrieve entities
+> for a single class.
+
+IMHO the 1:n/n:1 concept could be made clearer.
+
+2.2.3. Dependency Conflicts
+
+I think Table 1 needs more explanation.
+
+3. Analysis of Mapping Approaches
+
+As far as I understand the main content of Sec. 3 is that (conceptually) a mapping task might differ in
+- the information it can use (schema, RDB data, TBox, ABox)
+- whether it runs fully or semi-automatically
+- the way a semi-automatic approach is guided with feedback (actual mapping results, definitions in mapping source/target, kind of user input)
+
+First, I think this content could be shortened a bit. On the other hand it isn't really discussed how these issues were reflected in the framework design. All that is said is that all mapping systems might stick to the one or the other variant and thus an end-to-end approach was chosen. In my opinion a bit more could be said here.
+
+4. RODI Benchmark Suite
+
+> Multi-source integration can be tested as a sequence
+> of different scenarios that share the same target ontol-
+> ogy. We include specialized scenarios for such testing
+> with the conference domain.
+
+I don't really agree that this would cover all issues of multi-source integration. Things like multiple resources referring to the same real-world individuals, or violations of disjoint class axioms could be introduced without being noticed that way.
+
+4.1. Overview
+
+Table 2: Not clear what 'misleading axioms' actually are.
+
+4.2. Data Sources and Scenarios
+
+This should not be a sub section on its own but rather contain 4.3., 4.4., 4.5. and 4.6 as sub-sub sections.
+
+4.3. Conference Scenarios
+
+4.3.2. Relational Schemata
+
+> In particular, the previous version did cover only one
+> out of the above-mentioned three design patterns
+
+did cover --> covered (?)
+
+> The choice
+> of design pattern in each case is algorithmically
+> determined on a "best fit" approach considering
+> the number of specific and shared (inherited) at-
+> tributes for each of the classes.
+
+Not clear to me what that means.
+
+4.3.4. Data
+
+> Transfor-
+> mation of data follows the same process as translating
+> the T-Box.
+
+Not clear to me what this means.
+
+4.3.5. Queries
+
+> All scenarios draw on the same
+> pool of 56 query pairs, accordingly translated for each
+> ontology and schema.
+
+I only found 50 queries at max in the GitHub repository. Are the 56 queries reported somewhere? If some of them could not be translated, are they all useful?
+
+4.4. Geodata Domain -- Mondial Scenarios
+
+> The degree of difficulty in Mondial scenarios is
+> therefore generally higher than [...]
+
+phrasing
+
+4.6. Extension Scenarios
+
+Relatively short sub section.
+
+> Our benchmark suite is designed to be extensible
+
+Just out of interest: Are there any guiding/supporting tools (e.g. generators for synthetic data) available to set up own scenarios?
+
+4.7. Evaluation Criteria -- Scoring Function
+
+> (e.g., the overall number of conferences is much smaller
+> than the number of paper submission dates, yet are at
+> least as important in a query about the same papers)
+
+not clear to me
+
+> meaningful subset of information needs
+
+not clear to me what such subsets are
+
+> F-measures for query results contain-
+> ing IRIs are therefore w.r.t. the degree to which they
+> satisfy structural equivalence with a reference result.
+
+seems a verb missing
+
+> Structural equivalence effectively
+> means that if same-as links were established appropri-
+> ately, then both results would be semantically identical.
+
+This explanation needs to be more precise IMHO.
+
+5. Framework Implementation
+
+5.1. Architecture of the Benchmarking Suite
+
+Just as a note: In Fig. 4 the blue and gray parts are hard to distinguish when printed monochrome. Tools like ColorBrewer (http://colorbrewer2.org/) can suggest colors that are also well distinguishable on monochrome printouts.
+
+> via the Sesame API or using SPARQL
+
+footnote with URL would be nice
+
+> More
+> generally, mapping tools that cannot comply with the
+> assisted benchmark workflow can always trigger indi-
+> vidual aspects of initialization of evaluation separately.
+
+This is a bit vague.
+
+> Next, we build a corresponding index for
+> keys in the reference set. For both sets we determine
+> binding dependencies across tuples (i.e., re-occurrences
+> of the same IRI or key in different tuples). As a next
+> step, we narrow down match candidates to tuples where
+> all corresponding literal values are exact matches. Fi-
+> nally, we match complete result tuples with reference
+> tuples, i.e., we also check for viable correspondences
+> between keys and IRIs.
+
+For me it is not really clear what is done here in detail.
+
+> This last step corresponds to identi-
+> fying a maximal common subgraph (MCS) between
+> the dependency graphs of tuples on both sides, i.e., it
+> corresponds to the MCS-isomorphism problem. For ef-
+> ficiency reasons, we approximate the MCS if depen-
+> dency graphs contain transitive dependencies, breaking
+> them down to fully connected subgraphs. However, it
+> is usually possible to formulate query results to not
+> contain any such transitive dependencies by avoiding
+> inter-dependent IRIs in SPARQL SELECT results in
+> favor of a set of significant literals describing them. All
+> queries shipped with this benchmark are free of transi-
+> tive dependencies, hence the algorithm is accurate for
+> all delivered scenarios.
+
+This is not clear to me.
+
+6. Benchmark Results
+
+6.1. Evaluated Systems
+
+There are some systems like Ultrawrap or D2RQ that (AFAIK) also allow automatic mapping generation, that were not used. Is there a reason for that? On the other hand COMA++ is used which (for me) does not really fit in here.
+
+6.3. Default Scenarios: Overall Results
+
+> Good news is that some of the
+> most actively developed current systems, BootOX and
+> IncMap, could improve
+
+> the two most specialized
+> and actively developed systems, BootOX and IncMap,
+> are leading the field
+
+This sounds a bit biased (esp. when this is written by the tools' developers and IMHO not the whole state-of-the-art was evaluated).
+
+6.4. Default Scenarios: Drill-down
+
+> both systems benchmarked earlier this year
+
+It's 2016, now. ;)

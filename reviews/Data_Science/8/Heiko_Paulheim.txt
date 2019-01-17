@@ -1,0 +1,47 @@
+Overall Impression: Weak
+Suggested Decision: Reject
+Technical Quality of the paper: Weak
+Presentation: Average
+Reviewer`s confidence: Medium
+Significance: High significance
+Background: Reasonable
+Novelty: Clear novelty
+Data availability: All used and produced data are FAIR and openly available in established data repositories
+Length of the manuscript: The length of this manuscript is about right
+Summary of paper in a few sentences: 
+
+This position paper presents the vision of a paradigm shift in machine learning: stepping from propositional data to (knowledge) graphs as a more universal data representation, and developing end-to-end learning approaches that do not follow the currently dominant pattern of first converting the graph into a propositional form and then applying standard machine learning on top.
+
+Reasons to accept: 
+
+* interesting vision
+* probably stimulating some interesting thoughts for other researchers
+
+Reasons to reject: 
+
+* argumentation not always convincing
+* slight over-selling
+
+Further comments: 
+
+This position paper presents the vision of a paradigm shift in machine learning: stepping from propositional data to (knowledge) graphs as a more universal data representation, and developing end-to-end learning approaches that do not follow the currently dominant pattern of first converting the graph into a propositional form and then applying standard machine learning on top.
+
+In general, being a knowledge graph enthusiast myself, I like the idea of the paper. However, I miss a stronger argumentation towards knowledge graphs, as they are just one paradigm of how to represent data, and enthusiasts of other paradigms might have other feelings. In general, the whole paper would also work if "knowledge graph" would be represented with "relational database" (i.e., developing an end-to-end system that operates on a whole relational database including its schema, not just a single propositional table), or with "XML", or with "NoSQL database". Thus, the paper would benefit from a stronger argumentation why knowledge graphs are supposed to be the superior paradigm.
+
+On the detail level, there are a few questionable claims. The example in Fig. 1 is introduced as if it was a standard model (although section 4.3 relativizes that interpretation), but there are a few options here. For example, the birthdate could also have been expressed using the W3C Time Ontology [1], the age could be an observation with a timestamp instead of a simple literal, etc.
+
+The claim about the open world assumption as an inherent means to describe incomplete knowledge is also questionable. Technically, I do not see a difference to a database with a null value. Since the paper states that an end-to-end-system for learning with knowledge graphs still needs to be developed, which can also be stated about databases with null values. Furthermore, the claim that the number of entities with a missing property is ten times higher than the number of entities with a property value needs a source.
+
+In section 2.2, the expression of background knowledge in an ontology and the use of reasoning is discussed. This is somewhat contradicting to the end-to-end idea: if a reasoner is used a preprocessing step, it is impossible to get back before that step, e.g., for parameter tuning (such as: changing the set of inference rules). Furthermore, when regarding the deep learning paradigm: why not feed the learning algorithm with the knowledge graph and the ontology and let it figure out the appropriate reasoning itself (see, e.g., [2]). Likewise, in section 4.2, it is claimed that machine learning algorithms cannot exploit subclass hierarchies. This is, to the best of my knowledge, not true, as there are both hierarchical classification approaches [3] as well as learning approaches that can handle hierarchies in features (e.g., [4]).
+
+The discussion of text literals as a challenge is good, but it is not the only challenge. Data is not just values and literals, there is also media data. A universal data representation, as proposed in this paper, should also treat those as first class citizens; the same holds for streaming data. Without such aspects discussed, the claim that knowledge graphs can be *the* data model for machine learning is a bit too bold.
+
+Overall, I like the idea of the paper, and the vision presented. However, the discussion is not thorough enough and requires a bit more maturity before publication.
+
+Minor observation:
+* in section 5.3, there is a reference to a missing figure
+
+[1] https://www.w3.org/TR/owl-time/
+[2] Paulheim and Stuckenschmidt: Fast approximate A-box consistency checking using machine learning (2016)
+[3] Silla Jr, Carlos N., and Alex A. Freitas. "A survey of hierarchical classification across different application domains." Data Mining and Knowledge Discovery 22.1-2 (2011): 31-72.
+[4] Arnold, Andrew, Ramesh Nallapati, and William W. Cohen. "Exploiting Feature Hierarchy for Transfer Learning in Named Entity Recognition." ACL. 2008.

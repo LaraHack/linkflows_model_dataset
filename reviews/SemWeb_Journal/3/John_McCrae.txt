@@ -1,0 +1,36 @@
+Review Comment: 
+This paper presents a discussion of implementation flaws in OWL DL ontologies and presents a web service for identifying these errors. The paper focuses on errors that are caused primarily by incompatibilities with reasoning in OWL DL over linked data models, which has some validity but is behind the state-of-the-art for linked data, where practitioners have largely rejected OWL and strict ontological reasoning. More recent techniques, notably SHACL, are mentioned only briefly and dismissively by the authors. It would be more interesting if this paper was more focused on errors that typically bother linked data practitioners (e.g., as their "typo" module does) than minor OWL issues, that seem to have little practical significance (as proven by the continued existence of such errors in major vocabularies).
+
+The evaluation of this paper highlights some predictable errors in widely used ontologies, but does not really evaluate the methodology of this paper. As a reader, one has very little idea if this methodology captures all errors or captures more errors than a standard OWL-DL reasoner would. While the errors detected by the authors are of interest to the community, it does not provide a sufficient evaluation for a journal article.
+
+This paper is not in the SWJ format.
+
+The inability of the proposed system to handle circular subsumptions is concerning. Why did the authors chose a limited reasoning framework such as Prolog?
+
+More care should be taken when citing ontologies. For example the WordNet ontology (the official one supported by Princeton and the Global WordNet Association) is available. I assume that some other one (I would guess the VU one) is being referred to. Similarly, models like SKOS and Dublin Core can be more clearly cited.
+
+The typos section is insufficiently explained, is it simply a check for all entity names not declared in their defining ontology? If so how does it detect that XSD has a misspelled URL (this could be another ontology that is unavailable)? How does this compare to other contributions in the field of linked data quality.
+
+The authors make a big deal about the use of rdf:List in schema definitions, claiming that it should be "stamped out in the wild". Actually this is quite acceptable in RDFS models and I wonder why they take such a hard line to this, especially as there is no standard OWL solution to this very basic problem (the authors do suggest some rather obscure solutions).
+
+The authors do not reference the Luzzu system of Debattista et al., which is highly relevant here.
+
+Minor
+=====
+p1. Semantic Web should be capitalized
+p1. Linked data should not be capitalized (or at least be consistent)
+p1. "in order to" is repeated
+p2. Web of Data should be capitalized
+p2. "the Dacura Quality Service" surely?
+p2. Web of Data for logical (no comma)
+p2. It is normal to capitalize Section X, Table X and Figure X
+p3. oneOf has no namespace
+Code examples should be formatted in a fixed width font
+p4. metadata is a word (no hyphen)
+p4. ManBearPig might not be considered a suitable example by some readers
+p5. Please cite MG15 instead of saying "previous publication"
+p5. Define ACID when first used (not on p8)
+p9. form a model under a closed world assumption (as, in practice, ...)
+p10. "takes pains" is colloquial
+p15. "leads to a mess" could be stated more scientifically
+p19. Footnote 5 doesn't work

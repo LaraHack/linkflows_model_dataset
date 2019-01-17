@@ -1,0 +1,50 @@
+
+Suggestion: 
+Major Revision
+Review Comment: 
+This paper addresses the interesting problem of DBPedia entity classification through microtask-based crowdsourcing, using three different task design approaches that are adapted to this type of crowdsourcing environments.
+
+Even though the problem is generally well-understood, I miss a section that clearly states and formalizes the problem (both the entity typing problem and the crowdsourcing thereof). And together with this, I miss a good overview of the requirements and challenges associated to addressing this problem. The later will greatly help to read the section on the approach and also help to understand better the task design decisions that you have made. This is tightly connected to your claim that the novelty of this paper does not lie on running entity typing through crowdsourcing per-se, “but in the systematic study of a set of alternative workflows”.
+
+From the paper in general, and more specifically from Section 3.1, I have the impression that some of the task designs (for example, W1), require a significantly amount of post-processing by experts, and you acknowledge this. The question here is whether crowdsourcing this task makes sense at all, given that you may incur in roughly the same costs if you (as experts) do the task yourself, and perhaps get even better results in terms of quality.
+
+The cheating behavior of workers in this type of crowdsourcing platforms is a widely acknowledged problem. Based on the task design you used I can imagine that you also had to face this problem. However, I have not seen a good discussion in this paper on this issue. Given that the main purpose of this paper is to explore the possible workflow alternatives that you can use in the context of the main problem being addressed, I think it makes sense to discuss how robust these alternatives (and the counter-measures taken) are to cheating behavior of workers, especially during the 2nd step of W1 (I expect an increased cheating behavior in this phase, since the voting approach used in your design is highly subjective and you probably did not use gold data to check for correct answers).
+
+In 3.2.2 you mention that, in your opinion, the third level of the ontology is a good compromise between relevance of the suggestions and feasibility of the task. But what do the results say? Is it really a good compromise based on the results? Also, this seems to be a limitation of your approach (arriving down to the third level is not better than what is produced by automated approaches), and the immediate question that follows here is whether crowdsourcing is still useful here, and to what extent. This deserves a more elaborated discussion.
+
+An overall comment regarding the experiment settings is that there are so many parameters that are varied across experiments, which makes it very hard to tell with enough certainty if the differences in the performance are due to the workflow design or any single (or combination of) parameter(s). This issue makes quite hard to interpret the results reported in Table 4.
+
+The evaluation criteria used in section 4.1.4 are not very clear. More specifically, I’m not convinced that the combination of Sg, Sc and Sp tells something meaningful (at least in the way it is combined in the paper). Perhaps I just did not get the idea. Can you elaborate more on the reasoning behind these metrics? And, have you considered other metrics like precision and recall?. By the way, in some parts of the paper you mention that accuracy and precision were taken into account, but I have not seen a definition for them anywhere in the paper.
+
+When explaining table 4, you mention that there are “significant” differences in terms of accuracy for some of the experiments. But did you actually quantify such significance? Can you report the values?
+
+Regarding the related work section, crowdsourcing has also been extensively used in the context of Machine Learning. More specifically, it has been employed as a way of collecting "labels" to build training sets. This problem is very close to entity typing, at least from the crowdsourcing perspective. It would be would to consider this whole body of work in the related work section.
+
+Given the many issues reported in this review, perhaps it is worth considering the revision of the whole set of workflow and experiment settings, and then re-running of the experiments. Specially if the authors want to insist on the analysis of the performance differences of the alternative workflows being analyzed.
+
+Other comments:
+- Section 3.1.1: how much is asking “enough times”? and how reliable is the way of collecting task as reported in this section (this is, taking the top 3 and then asking for preferences)?
+
+- Section 3.2.2: In this section you state that the your ultimate aim is to engineer systems that combine entity typing tools with crowdsourcing. This was not clear from the beginning of the paper. Can you clarify this early on?
+
+- Fig. 1: regarding the free text box, are you sure that workers will correctly interpret what it means to provide a category for this item (from the text used to describe the task)? Do you have an overall job description where you explain this? Can you add it to the paper?
+
+- Fig. 2: I’m curious to know to what extent workers clicked on the option “other”. And whether this option encouraged workers to cheat (it is easier to just say always “other”)
+
+- Section 3.3.4 - Payment: Can you elaborate more on how you decided on the payments? Just citing a paper is not enough. As a reader, I would like to understand the reasoning behind the choice (also, as related to your specific approach and task design).
+
+- Section 3.3.4 - Quality control: What sort of test questions did you use? Can you provide examples?
+
+- Fig. 3: same question as for Fig 2.
+
+- Fig. 4: It is important to report the extent to which the free text box was used. And how good the inputs were.
+
+- Section 3.3.4 - Aggregation: I did not get the discussions on the “default options” (aggregation=‘agg’). Can you explain this better?
+
+- Section 3.4: You mention that you also run a second set of experiments with unclassified entities. But how do you validate your approach in this cases? I think that if you want to make good contributions to the definition of new mapping rules you first need to make sure that your approach works.
+
+- Section 4.1.1: You mentioned that you changed the number of judgements across experiments to see how to optimise cost vs. accuracy. But what about the other parameters? Where they also adjusted? Can they contribute somehow to the optimization?
+
+- Section 4.1.3: You mentioned a Cohen’s kappa of 0.7772. Is this an acceptable value according to the literature?
+
+- Section 4.3: It is reported that E2 was the most expensive experiment because of the higher number of judgements collected for the test questions. Isn’t this an indication of badly designed task or perhaps a task setting that makes the whole job harder than the others? More insights are needed here.

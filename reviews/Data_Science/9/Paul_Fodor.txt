@@ -1,0 +1,23 @@
+Overall Impression: Excellent
+Suggested Decision: Accept
+Technical Quality of the paper: Excellent
+Presentation: Excellent
+Reviewer`s confidence: High
+Significance: Moderate significance
+Background: Reasonable
+Novelty: Limited novelty
+Data availability: All used and produced data are FAIR and openly available in established data repositories
+Length of the manuscript: The length of this manuscript is about right
+Summary of paper in a few sentences: 
+
+This paper surveys the systems and techniques available in the field of stream reasoning and complex event processing. This field has applications in several settings that require high dynamic data: Smart Cities, Industry 4.0, Internet of Things, social media analytics and stock market. Although a new field (this year marks stream reasoning turn 10) it is a very prolific field for all of these years. Best part of this article is identifying the main issues in stream reasoning and starting the process of identifying open issues in the field.
+
+Reasons to accept: 
+
+It is the first paper that surveys this prolific field. Although there is a book that surveyed a few of the systems discussed in this paper before (Event Processing in Action, by Opher Etzion and Peter Niblett), this paper covers the subsequent research since 2010 and also identifies open challenges.
+
+Reasons to reject: 
+
+As a practitioner in this area, I would have liked some simple use cases that cover the many applications of stream processing, like: traffic analysis of transit information, weather updates or stock market. However, I think that was not the goal of this paper that had a lot of information about the different stream systems reasoning systems.
+
+Further comments: 

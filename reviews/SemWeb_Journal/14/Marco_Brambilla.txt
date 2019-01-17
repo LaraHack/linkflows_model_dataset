@@ -1,0 +1,26 @@
+Suggestion: 
+Major Revision
+Review Comment: 
+The paper presents an approach based on paid crowdsourcing for classifying entities according to a predefined taxonomy.
+Namely, the classification is performed over (some) concepts of the DBpedia ontology.
+
+The paper presents a set of three variants of the approach and compares them against one experimental dataset.
+
+The work addresses a relevant problem, i.e., non obvious entity classification.
+The strengths of the paper are:
+- description of the problem adequate
+- rather complete coverage of the related work
+- solid and sound experimental setting
+- appropriate reporting of the results
+
+The weaknesses of the work include:
+- related work analysis is somehow out of focus: half of the analysis deals with GWAP approaches, which have very limited relevance with respect to the techniques actually used in the work. I suggest to remove or reduce dramatically this part, and instead put more emphasis on the analysis of the works on crowdsourcing strategy design and so on
+- the problem definition, especially in some experimental cases, is not well defined or could lead to big bias in the results: for instance, the fact that DBpedia has a limited structure in terms of number and deepness of the type taxonomy, heavily affects the results, because this hardly matches the typical attitude or reasoning of people. This is mentioned briefly, but needs much deeper discussion. The main problem with this is that it affects differently the three alternative approaches. Also the discussion of alternative classifications wrt to the ones available on DBpedia is not particularly meaningful.
+- the dataset of concepts itself is rather biased, as it include a set of surprisingly concentrated entities of very few types. This leads naturally to further bias in the executor.
+- in terms of crowdsourcing techniques, it's surprising that only very simple strategies are attempted, while a plethora of works exist that discuss strategy patterns for addressing quality improvement in crowds
+- overall, the work does not really leads to interesting insights wrt to the problem, as it boils down to a small set of limited experiments on arbitrarily chosen strategies for the specific problem.
+- as such, innovation itself is rather limited.
+
+Minor aspects:
+- some contents are not useful in the current shape. For instance, Table 4 includes some numbers with no reference of what the numbers are. Table 2 is a summary of various issues, with no logical connection (nor descriptive headers).
+- some formatting is wrong. Eg. in formulas 1,2,3: the "f" used is the symbol for function
